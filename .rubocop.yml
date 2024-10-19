@@ -1,23 +1,23 @@
 AllCops:
-  TargetRubyVersion: ~> 3.2 # 3.2 ve üzerindeki Ruby sürümleri için geçerli kurallar.
-  NewCops: enable          # Yeni kuralları etkinleştirir. Yeni sürümlerde eklenen kuralların da kontrol edilmesini sağlar.
+  TargetRubyVersion: ~> 3.2 # Applicable rules for Ruby versions 3.2 and above.
+  NewCops: enable          # Enables new rules. Ensures new rules added in later versions are checked.
 
 Metrics/LineLength:
-  Max: 80                  # Her satırın maksimum 80 karakter uzunluğunda olmasını zorunlu kılar.
-                           # Örnek: `puts 'Bu bir satırdır'` 80 karakterden uzunsa uyarı verir.
+  Max: 80                  # Enforces a maximum line length of 80 characters.
+                           # Example: If `puts 'This is a line'` exceeds 80 characters, it will raise a warning.
 
 Style/StringLiterals:
-  EnforcedStyle: double_quotes # Stringler için çift tırnak kullanımını zorunlu kılar.
-                           # Örnek: `"Bu bir string"` yerine `'Bu bir string'` kullanılırsa uyarı verir.
+  EnforcedStyle: double_quotes # Enforces the use of double quotes for strings.
+                           # Example: A warning will be raised if `'This is a string'` is used instead of `"This is a string"`.
 
 Style/FrozenStringLiteralComment:
-  Enabled: true            # Dosya başına `# frozen_string_literal: true` yorumunu zorunlu kılar.
-                           # Bu, stringlerin değiştirilemez olmasını sağlar. Örnek:
-                           # `s = 'test'` yerine `s = 'test'.freeze`.
+  Enabled: true            # Requires the `# frozen_string_literal: true` comment at the top of the file.
+                           # This makes strings immutable. Example:
+                           # Use `s = 'test'.freeze` instead of `s = 'test'`.
 
 Layout/IndentationWidth:
-  Width: 2                 # Kodda kullanılacak girinti genişliğini 2 boşluk olarak ayarlar.
-                           # Örnek:
+  Width: 2                 # Sets the indentation width to 2 spaces.
+                           # Example:
                            # ```
                            # def method
                            #   if condition
@@ -27,17 +27,17 @@ Layout/IndentationWidth:
                            # ```
 
 Naming/VariableName:
-  AllowedNames: ['_*']     # Değişken isimleri için `_` ile başlayan isimlerin (örn. `_variable`) geçerli olmasına izin verir.
-                           # Örnek: `_temp_var` ismi geçerli kabul edilirken, `1var` geçersiz olur.
+  AllowedNames: ['_*']     # Allows variable names that start with `_` (e.g., `_variable`).
+                           # Example: `_temp_var` is valid, while `1var` is invalid.
 
 Metrics/MethodLength:
-  Max: 70                  # Bir metodun maksimum 70 satır uzunluğunda olmasını zorunlu kılar.
-                           # Örnek: Eğer metod 70 satırdan uzunsa uyarı verir.
+  Max: 70                  # Enforces a maximum length of 70 lines for a method.
+                           # Example: A warning will be raised if a method exceeds 70 lines.
 
 Metrics/ClassLength:
-  Max: 500                 # Bir sınıfın maksimum 500 satır uzunluğunda olmasını zorunlu kılar.
-                           # Örnek: Sınıf 500 satırdan uzunsa uyarı verir.
+  Max: 500                 # Enforces a maximum length of 500 lines for a class.
+                           # Example: A warning will be raised if a class exceeds 500 lines.
 
 Rails/HttpStatus:
-  EnforcedStyle: symbol     # HTTP durum kodlarının sembol olarak kullanılmasını zorunlu kılar.
-                           # Örnek: `:ok` kullanımı `200` kullanımına göre tercih edilir.
+  EnforcedStyle: symbol     # Enforces the use of symbols for HTTP status codes.
+                           # Example: `:ok` is preferred over `200`.
