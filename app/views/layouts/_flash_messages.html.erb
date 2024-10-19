@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+  <div class="bg-green-500 text-white p-4 rounded-md mb-4 flex justify-between items-center" role="alert">
+    <span><%= flash[:notice] %></span>
+    <button type="button" class="ml-4 text-white" onclick="this.parentElement.style.display='none'">
+      &times;
+    </button>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="bg-yellow-500 text-white p-4 rounded-md mb-4 flex justify-between items-center" role="alert">
+    <span><%= flash[:alert] %></span>
+    <button type="button" class="ml-4 text-white" onclick="this.parentElement.style.display='none'">
+      &times;
+    </button>
+  </div>
+<% end %>
