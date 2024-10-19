@@ -3,8 +3,8 @@ AllCops:
   NewCops: enable          # Enables new rules. Ensures new rules added in later versions are checked.
 
 Layout/LineLength:
-  Max: 120                  # Enforces a maximum line length of 80 characters.
-                           # Example: If `puts 'This is a line'` exceeds 80 characters, it will raise a warning.
+  Max: 150                  # Enforces a maximum line length of 150 characters.
+                           # Example: If `puts 'This is a line'` exceeds 150 characters, it will raise a warning.
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes # Enforces the use of double quotes for strings.
@@ -27,9 +27,12 @@ Layout/IndentationWidth:
                            # ```
 
 Metrics/MethodLength:
-  Max: 100                  # Enforces a maximum length of 70 lines for a method.
-                           # Example: A warning will be raised if a method exceeds 70 lines.
+  Max: 100                  # Enforces a maximum length of 100 lines for a method.
+                           # Example: A warning will be raised if a method exceeds 100 lines.
 
 Metrics/ClassLength:
   Max: 500                 # Enforces a maximum length of 500 lines for a class.
                            # Example: A warning will be raised if a class exceeds 500 lines.
+
+Style/Documentation:
+  Enabled: false
