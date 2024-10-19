@@ -2,7 +2,7 @@ AllCops:
   TargetRubyVersion: ~> 3.2 # Applicable rules for Ruby versions 3.2 and above.
   NewCops: enable          # Enables new rules. Ensures new rules added in later versions are checked.
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 80                  # Enforces a maximum line length of 80 characters.
                            # Example: If `puts 'This is a line'` exceeds 80 characters, it will raise a warning.
 
@@ -37,7 +37,3 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Max: 500                 # Enforces a maximum length of 500 lines for a class.
                            # Example: A warning will be raised if a class exceeds 500 lines.
-
-Rails/HttpStatus:
-  EnforcedStyle: symbol     # Enforces the use of symbols for HTTP status codes.
-                           # Example: `:ok` is preferred over `200`.
