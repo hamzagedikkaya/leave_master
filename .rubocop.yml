@@ -1,8 +1,43 @@
-# Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+AllCops:
+  TargetRubyVersion: ~> 3.2 # 3.2 ve üzerindeki Ruby sürümleri için geçerli kurallar.
+  NewCops: enable          # Yeni kuralları etkinleştirir. Yeni sürümlerde eklenen kuralların da kontrol edilmesini sağlar.
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+Metrics/LineLength:
+  Max: 80                  # Her satırın maksimum 80 karakter uzunluğunda olmasını zorunlu kılar.
+                           # Örnek: `puts 'Bu bir satırdır'` 80 karakterden uzunsa uyarı verir.
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes # Stringler için çift tırnak kullanımını zorunlu kılar.
+                           # Örnek: `"Bu bir string"` yerine `'Bu bir string'` kullanılırsa uyarı verir.
+
+Style/FrozenStringLiteralComment:
+  Enabled: true            # Dosya başına `# frozen_string_literal: true` yorumunu zorunlu kılar.
+                           # Bu, stringlerin değiştirilemez olmasını sağlar. Örnek:
+                           # `s = 'test'` yerine `s = 'test'.freeze`.
+
+Layout/IndentationWidth:
+  Width: 2                 # Kodda kullanılacak girinti genişliğini 2 boşluk olarak ayarlar.
+                           # Örnek:
+                           # ```
+                           # def method
+                           #   if condition
+                           #     do_something
+                           #   end
+                           # end
+                           # ```
+
+Naming/VariableName:
+  AllowedNames: ['_*']     # Değişken isimleri için `_` ile başlayan isimlerin (örn. `_variable`) geçerli olmasına izin verir.
+                           # Örnek: `_temp_var` ismi geçerli kabul edilirken, `1var` geçersiz olur.
+
+Metrics/MethodLength:
+  Max: 70                  # Bir metodun maksimum 70 satır uzunluğunda olmasını zorunlu kılar.
+                           # Örnek: Eğer metod 70 satırdan uzunsa uyarı verir.
+
+Metrics/ClassLength:
+  Max: 500                 # Bir sınıfın maksimum 500 satır uzunluğunda olmasını zorunlu kılar.
+                           # Örnek: Sınıf 500 satırdan uzunsa uyarı verir.
+
+Rails/HttpStatus:
+  EnforcedStyle: symbol     # HTTP durum kodlarının sembol olarak kullanılmasını zorunlu kılar.
+                           # Örnek: `:ok` kullanımı `200` kullanımına göre tercih edilir.
