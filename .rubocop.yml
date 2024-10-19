@@ -36,3 +36,5 @@ Metrics/ClassLength:
 
 Style/Documentation:
   Enabled: false
+
+DisabledByDefault: true
