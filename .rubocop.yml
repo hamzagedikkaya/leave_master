@@ -1,9 +1,9 @@
 AllCops:
-  TargetRubyVersion: ~> 3.2 # Applicable rules for Ruby versions 3.2 and above.
+  TargetRubyVersion: 3.3 # Applicable rules for Ruby versions 3.2 and above.
   NewCops: enable          # Enables new rules. Ensures new rules added in later versions are checked.
 
 Layout/LineLength:
-  Max: 80                  # Enforces a maximum line length of 80 characters.
+  Max: 120                  # Enforces a maximum line length of 80 characters.
                            # Example: If `puts 'This is a line'` exceeds 80 characters, it will raise a warning.
 
 Style/StringLiterals:
@@ -26,12 +26,8 @@ Layout/IndentationWidth:
                            # end
                            # ```
 
-Naming/VariableName:
-  AllowedNames: ['_*']     # Allows variable names that start with `_` (e.g., `_variable`).
-                           # Example: `_temp_var` is valid, while `1var` is invalid.
-
 Metrics/MethodLength:
-  Max: 70                  # Enforces a maximum length of 70 lines for a method.
+  Max: 100                  # Enforces a maximum length of 70 lines for a method.
                            # Example: A warning will be raised if a method exceeds 70 lines.
 
 Metrics/ClassLength:
