@@ -4,37 +4,24 @@ AllCops:
 
 Layout/LineLength:
   Max: 150                  # Enforces a maximum line length of 150 characters.
-                           # Example: If `puts 'This is a line'` exceeds 150 characters, it will raise a warning.
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes # Enforces the use of double quotes for strings.
-                           # Example: A warning will be raised if `'This is a string'` is used instead of `"This is a string"`.
 
 Style/FrozenStringLiteralComment:
-  Enabled: true            # Requires the `# frozen_string_literal: true` comment at the top of the file.
-                           # This makes strings immutable. Example:
-                           # Use `s = 'test'.freeze` instead of `s = 'test'`.
+  Enabled: true                  # Requires the `# frozen_string_literal: true` comment at the top of the file.
 
 Layout/IndentationWidth:
-  Width: 2                 # Sets the indentation width to 2 spaces.
-                           # Example:
-                           # ```
-                           # def method
-                           #   if condition
-                           #     do_something
-                           #   end
-                           # end
-                           # ```
+  Width: 2                  # Sets the indentation width to 2 spaces.
 
 Metrics/MethodLength:
   Max: 100                  # Enforces a maximum length of 100 lines for a method.
-                           # Example: A warning will be raised if a method exceeds 100 lines.
 
 Metrics/ClassLength:
-  Max: 500                 # Enforces a maximum length of 500 lines for a class.
-                           # Example: A warning will be raised if a class exceeds 500 lines.
+  Max: 500                  # Enforces a maximum length of 500 lines for a class.
 
 Style/Documentation:
   Enabled: false
 
-DisabledByDefault: true
+require: 
+  - rubocop-rails                  # Enable rubocop-rails extension
