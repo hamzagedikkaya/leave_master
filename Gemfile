@@ -61,3 +61,5 @@ end
 gem "tailwindcss-rails", "~> 3.0"
 
 gem "devise", "~> 4.9"
+
+gem "simple_form", "~> 5.3"

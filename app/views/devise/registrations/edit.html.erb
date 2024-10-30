@@ -1,65 +1,58 @@
-<h2 class="text-2xl font-bold text-center mb-6">Edit <%= resource_name.to_s.humanize %></h2>
+<div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-8">
+  <h2 class="text-2xl font-bold text-center mb-6">Edit <%= resource_name.to_s.humanize %></h2>
 
-<div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 overflow-hidden">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="mb-4">
-      <%= f.label :name_surname, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.text_field :name_surname, class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    <div class="mb-4 flex space-x-4">
+      <div class="flex-1">
+        <%= f.input :name_surname, required: true, label: "Name Surname", input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
+      </div>
+      <div class="flex-1">
+        <%= f.input :gsm, required: true, label: "GSM", input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
+      </div>
     </div>
 
-    <div class="mb-4">
-      <%= f.label :gsm, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.telephone_field :gsm, class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
-    </div>
-
-    <div class="mb-4">
-      <%= f.label :date_of_birth, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.date_select :date_of_birth, start_year: 1900, end_year: Date.current.year, prompt: { day: 'Day', month: 'Month', year: 'Year' }, class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
-    </div>
-
-    <div class="mb-4">
-      <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    <div class="mb-4 flex space-x-4">
+      <div class="flex-1">
+        <%= f.input :date_of_birth, required: true, label: "Date of Birth", html5: true, input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
+      </div>
+      <div class="flex-1">
+        <%= f.input :email, required: true, label: "Email", autofocus: true, autocomplete: "email", input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
+      </div>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div class="mb-4">
+      <div class="mb-4 text-yellow-600">
         Currently waiting confirmation for: <%= resource.unconfirmed_email %>
       </div>
     <% end %>
 
-    <div class="mb-4">
-      <%= f.label :password, class: "block text-sm font-medium text-gray-700" %> <i>(leave blank if you don't want to change it)</i>
-      <%= f.password_field :password, autocomplete: "new-password", class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
-      <% if @minimum_password_length %>
-        <br />
-        <em class="text-sm text-gray-500"><%= @minimum_password_length %> characters minimum</em>
-      <% end %>
+    <div class="mb-4 flex space-x-4">
+      <div class="flex-1">
+        <%= f.input :password, autocomplete: "new-password", input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
+        <% if @minimum_password_length %>
+          <em class="text-sm text-gray-500">(minimum <%= @minimum_password_length %> characters)</em>
+        <% end %>
+      </div>
+      <div class="flex-1">
+        <%= f.input :password_confirmation, label: "Password Confirmation", input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
+      </div>
     </div>
 
-    <div class="mb-4">
-      <%= f.label :password_confirmation, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
-    </div>
-
-    <div class="mb-4">
-      <%= f.label :current_password, class: "block text-sm font-medium text-gray-700" %> <i>(we need your current password to confirm your changes)</i>
-      <%= f.password_field :current_password, autocomplete: "current-password", class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" %>
+    <div class="mb-6">
+      <%= f.input :current_password, required: true, hint: "(we need your current password to confirm your changes)", autocomplete: "current-password", input_html: { class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" } %>
     </div>
 
     <div class="mt-6">
-      <%= f.submit "Update", class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
+      <%= f.submit "Update", class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200" %>
     </div>
   <% end %>
-</div>
 
-<h3 class="text-lg font-semibold text-center mt-6">Cancel my account</h3>
-<div class="text-center">
-  Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "text-red-600 hover:text-red-500" %>
-</div>
-
-<div class="text-center mt-4">
-  <%= link_to "Back", :back, class: "font-medium text-blue-600 hover:text-blue-500" %>
+  <div class="mt-4">
+    <div>
+      Unhappy? 
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "text-red-600 hover:text-red-900" %>
+    </div>
+  </div>
 </div>
