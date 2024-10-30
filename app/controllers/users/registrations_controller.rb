@@ -141,7 +141,8 @@ module Users
 
     def account_update_params
       # devise_parameter_sanitizer.sanitize(:account_update)
-      params.require(resource_name).permit(:email, :password, :password_confirmation, :current_password, :name_surname, :gsm, :date_of_birth)
+      params.require(resource_name).permit(:email, :password, :password_confirmation, :current_password, :name_surname, :gsm, :date_of_birth,
+                                           :profile_image)
     end
 
     def translation_scope
