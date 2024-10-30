@@ -1,0 +1,10 @@
+tr:
+  users:
+    user_team_not_found: "Kullanıcı veya takım bulunamadı."
+    assign_role:
+      assigned: "%{role} rolü başarıyla atandı."
+    remove_role:
+      removed: "%{role} rolü başarıyla kaldırıldı."
+  teams:
+    create:
+      success: 'Takım başarıyla oluşturuldu.'

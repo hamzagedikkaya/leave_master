@@ -23,5 +23,8 @@ Metrics/ClassLength:
 Style/Documentation:
   Enabled: false
 
-require: 
+Rails/I18nLazyLookup:
+  Enabled: false
+
+require:
   - rubocop-rails                  # Enable rubocop-rails extension
