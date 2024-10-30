@@ -109,6 +109,10 @@ GEM
     erubi (1.13.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hamlit (3.0.3)
+      temple (>= 0.8.2)
+      thor
+      tilt
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -218,6 +222,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.3.8)
+    rolify (6.0.1)
     rubocop (1.67.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -244,6 +249,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_form (5.3.1)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -263,7 +271,9 @@ GEM
     tailwindcss-ruby (3.4.14-arm64-darwin)
     tailwindcss-ruby (3.4.14-x86_64-darwin)
     tailwindcss-ruby (3.4.14-x86_64-linux)
+    temple (0.10.3)
     thor (1.3.2)
+    tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.11)
       actionpack (>= 6.0.0)
@@ -302,14 +312,17 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.9)
+  hamlit
   jbuilder
   jsbundling-rails
   pg (~> 1.5)
   puma (>= 5.0)
   rails (~> 7.2.1)
+  rolify
   rubocop
   rubocop-rails
   selenium-webdriver
+  simple_form (~> 5.3)
   sprockets-rails
   stimulus-rails
   tailwindcss-rails (~> 3.0)

@@ -1,0 +1,11 @@
+%h1 Yeni Rol Oluştur
+
+= form_with(model: @role, local: true) do |form|
+  .field
+    = form.label :name, "Rol Adı"
+    = form.text_field :name, class: "form-control"
+
+  .actions
+    = form.submit "Rolü Oluştur", class: "btn btn-primary"
+
+= link_to 'Geri Dön', roles_path
