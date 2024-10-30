@@ -63,3 +63,8 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+      name_surname_blank: "Name and surname can't be blank."
+      name_surname_invalid: "Name and surname must contain at least one space and letters only."
+      gsm_invalid: "GSM must contain only numbers."
+      profile_image_too_large: "Profile image size must be less than 10MB."
+      profile_image_invalid_format: "Profile image must be in JPG, JPEG, or PNG format."

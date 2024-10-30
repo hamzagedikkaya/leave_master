@@ -2,24 +2,6 @@
 
 require "active_support/core_ext/integer/time"
 
-Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
-
-  config.enable_reloading = true
-  config.eager_load = false
-  config.consider_all_requests_local = true
-  config.server_timing = true
-
-  configure_caching
-  configure_active_storage
-  configure_action_mailer
-  configure_deprecation_warnings
-  configure_database
-  configure_assets
-  configure_view_annotations
-  configure_controller_errors
-end
-
 def configure_caching
   if Rails.root.join("tmp/caching-dev.txt").exist?
     enable_caching
@@ -80,4 +62,20 @@ end
 
 def configure_controller_errors
   Rails.application.config.action_controller.raise_on_missing_callback_actions = true
+end
+
+Rails.application.configure do
+  config.enable_reloading = true
+  config.eager_load = false
+  config.consider_all_requests_local = true
+  config.server_timing = true
+
+  configure_caching
+  configure_active_storage
+  configure_action_mailer
+  configure_deprecation_warnings
+  configure_database
+  configure_assets
+  configure_view_annotations
+  configure_controller_errors
 end

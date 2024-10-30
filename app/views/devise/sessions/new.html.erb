@@ -1,28 +1,19 @@
-<h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Log in</h2>
+<div class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-8 border border-gray-300">
+  <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Log in</h2>
 
-<div class="max-w-md mx-auto bg-white shadow-md rounded-lg p-8">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="mb-6">
-      <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-2" %>
-    </div>
-
-    <div class="mb-6">
-      <%= f.label :password, class: "block text-sm font-medium text-gray-700" %>
-      <%= f.password_field :password, autocomplete: "current-password", class: "mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-2" %>
-    </div>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.input :email, label: "Email", input_html: { autofocus: true, autocomplete: "email", class: "mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-2" }, wrapper_html: { class: "mb-4" } %>
+    <%= f.input :password, label: "Password", input_html: { autocomplete: "current-password", class: "mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-2" }, wrapper_html: { class: "mb-6" } %>
 
     <% if devise_mapping.rememberable? %>
-      <div class="flex items-center mb-6">
-        <%= f.check_box :remember_me, class: "h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" %>
-        <%= f.label :remember_me, class: "ml-2 block text-sm text-gray-900" %>
+      <div class="flex items-center mb-4">
+        <%= f.input :remember_me, as: :boolean, label: false, input_html: { class: "form-checkbox ml-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" } %>
+        <label class="ml-2 text-sm text-gray-900"><%= f.label :remember_me, "Remember me" %></label>
       </div>
     <% end %>
 
-    <div class="flex items-center justify-between mb-6">
-      <div class="text-sm">
-        <%= render "devise/shared/links" %>
-      </div>
+    <div class="flex items-center justify-between mb-6 text-sm">
+      <%= render "devise/shared/links" %>
     </div>
 
     <div>
@@ -30,5 +21,3 @@
     </div>
   <% end %>
 </div>
-
-
