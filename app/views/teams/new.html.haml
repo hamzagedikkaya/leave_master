@@ -3,7 +3,7 @@
 
 = simple_form_for @team, html: { class: 'w-full max-w-lg' } do |f|
   - if @team.errors.any?
-    %div.mb-4
+    .mb-4
       %h2.text-red-600.text-lg Takım oluşturma hataları:
       %ul.list-disc.list-inside
         - @team.errors.full_messages.each do |message|
