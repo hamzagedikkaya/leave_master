@@ -55,6 +55,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_145859) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
