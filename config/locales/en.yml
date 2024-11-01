@@ -1,10 +1,15 @@
 en:
   users:
     user_team_not_found: "User or team not found."
-    assign_role:
-      assigned: "%{role} role successfully assigned."
-    remove_role:
-      removed: "%{role} role successfully removed."
   teams:
     create:
-      success: 'Team created successfully.'
+      created: "Team was successfully created."
+    update:
+      updated: "Team was successfully updated."
+    destroy:
+      deleted: "Team was successfully deleted."
+  roles:
+    create:
+      created: "Role was successfully created."
+    update:
+      updated: "Role was successfully updated."
