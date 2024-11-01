@@ -17,7 +17,7 @@ class RolesController < ApplicationController
   def create
     @role = Role.new(role_params)
     if @role.save
-      redirect_to roles_path, notice: t("roles.create.created")
+      redirect_to roles_path, notice: t("controllers.roles.create.created")
     else
       render :new
     end
@@ -25,7 +25,7 @@ class RolesController < ApplicationController
 
   def update
     if @role.update(role_params)
-      redirect_to roles_path, notice: t("roles.update.updated")
+      redirect_to roles_path, notice: t("controllers.roles.update.updated")
     else
       render :edit
     end

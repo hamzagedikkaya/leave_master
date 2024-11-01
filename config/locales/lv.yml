@@ -1,0 +1,17 @@
+lv:
+  controllers:
+    teams:
+      create:
+        created: "Komanda tika veiksmīgi izveidota."
+      update:
+        updated: "Komanda tika veiksmīgi atjaunināta."
+      destroy:
+        deleted: "Komanda tika veiksmīgi dzēsta."
+    roles:
+      create:
+        created: "Loma tika veiksmīgi izveidota."
+      update:
+        updated: "Loma tika veiksmīgi atjaunināta."
+  models:
+    user:
+      locale_invalid: "%{value} nav derīga valoda."

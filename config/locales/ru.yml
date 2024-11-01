@@ -1,0 +1,17 @@
+ru:
+  controllers:
+    teams:
+      create:
+        created: "Команда была успешно создана."
+      update:
+        updated: "Команда была успешно обновлена."
+      destroy:
+        deleted: "Команда была успешно удалена."
+    roles:
+      create:
+        created: "Роль была успешно создана."
+      update:
+        updated: "Роль была успешно обновлена."
+  models:
+    user:
+      locale_invalid: "%{value} не является допустимым языком."

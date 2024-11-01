@@ -1,0 +1,28 @@
+hr:
+  simple_form:
+    "yes": 'Da'
+    "no": 'Ne'
+    required:
+      text: 'obavezno'
+      mark: '*'
+    error_notification:
+      default_message: "Molimo pregledajte sljedeće probleme:"
+    # Primjeri
+    # labels:
+    #   defaults:
+    #     password: 'Lozinka'
+    #   user:
+    #     new:
+    #       email: 'E-pošta za prijavu.'
+    #     edit:
+    #       email: 'E-pošta.'
+    # hints:
+    #   defaults:
+    #     username: 'Korisničko ime za prijavu.'
+    #     password: 'Bez posebnih znakova, molim.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Radije ne bih rekao'
+    # prompts:
+    #   defaults:
+    #     age: 'Odaberite svoju dob'

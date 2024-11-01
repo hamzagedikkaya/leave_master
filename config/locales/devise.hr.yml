@@ -1,0 +1,70 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+hr:
+  devise:
+    confirmations:
+      confirmed: "Vaša adresa e-pošte je uspješno potvrđena."
+      send_instructions: "U nekoliko minuta primit ćete e-poštu s uputama kako potvrditi svoju adresu e-pošte."
+      send_paranoid_instructions: "Ako vaša adresa e-pošte postoji u našoj bazi podataka, primit ćete e-poštu s uputama kako potvrditi svoju adresu e-pošte u nekoliko minuta."
+    failure:
+      already_authenticated: "Već ste prijavljeni."
+      inactive: "Vaš račun još nije aktiviran."
+      invalid: "Nevažeći %{authentication_keys} ili lozinka."
+      locked: "Vaš račun je zaključan."
+      last_attempt: "Imate još jedan pokušaj prije nego što vaš račun bude zaključan."
+      not_found_in_database: "Nevažeći %{authentication_keys} ili lozinka."
+      timeout: "Vaša sesija je istekla. Molimo prijavite se ponovno da biste nastavili."
+      unauthenticated: "Morate se prijaviti ili registrirati prije nastavka."
+      unconfirmed: "Morate potvrditi svoju adresu e-pošte prije nastavka."
+    mailer:
+      confirmation_instructions:
+        subject: "Upute za potvrdu"
+      reset_password_instructions:
+        subject: "Upute za resetiranje lozinke"
+      unlock_instructions:
+        subject: "Upute za otključavanje"
+      email_changed:
+        subject: "E-pošta promijenjena"
+      password_change:
+        subject: "Lozinka promijenjena"
+    omniauth_callbacks:
+      failure: "Nismo vas mogli autentificirati iz %{kind} zbog \"%{reason}\"."
+      success: "Uspješno autentificirani iz %{kind} računa."
+    passwords:
+      no_token: "Ne možete pristupiti ovoj stranici bez dolaska iz e-pošte za resetiranje lozinke. Ako dolazite iz e-pošte za resetiranje lozinke, provjerite da ste koristili cijeli URL koji je naveden."
+      send_instructions: "U nekoliko minuta primit ćete e-poštu s uputama kako resetirati svoju lozinku."
+      send_paranoid_instructions: "Ako vaša adresa e-pošte postoji u našoj bazi podataka, primit ćete poveznicu za oporavak lozinke na svoju e-poštu u nekoliko minuta."
+      updated: "Vaša lozinka je uspješno promijenjena. Sada ste prijavljeni."
+      updated_not_active: "Vaša lozinka je uspješno promijenjena."
+    registrations:
+      destroyed: "Zbogom! Vaš račun je uspješno otkazan. Nadamo se da ćemo vas uskoro ponovno vidjeti."
+      signed_up: "Dobrodošli! Uspješno ste se registrirali."
+      signed_up_but_inactive: "Uspješno ste se registrirali. Međutim, nismo vas mogli prijaviti jer vaš račun još nije aktiviran."
+      signed_up_but_locked: "Uspješno ste se registrirali. Međutim, nismo vas mogli prijaviti jer je vaš račun zaključan."
+      signed_up_but_unconfirmed: "Poruka s poveznicom za potvrdu poslana je na vašu adresu e-pošte. Molimo slijedite poveznicu kako biste aktivirali svoj račun."
+      update_needs_confirmation: "Uspješno ste ažurirali svoj račun, ali trebamo potvrditi vašu novu adresu e-pošte. Molimo provjerite svoju e-poštu i slijedite poveznicu za potvrdu kako biste potvrdili svoju novu adresu e-pošte."
+      updated: "Vaš račun je uspješno ažuriran."
+      updated_but_not_signed_in: "Vaš račun je uspješno ažuriran, ali budući da je vaša lozinka promijenjena, trebate se ponovno prijaviti."
+    sessions:
+      signed_in: "Uspješno ste se prijavili."
+      signed_out: "Uspješno ste se odjavili."
+      already_signed_out: "Uspješno ste se odjavili."
+    unlocks:
+      send_instructions: "U nekoliko minuta primit ćete e-poštu s uputama kako otključati svoj račun."
+      send_paranoid_instructions: "Ako vaš račun postoji, primit ćete e-poštu s uputama kako ga otključati u nekoliko minuta."
+      unlocked: "Vaš račun je uspješno otključan. Molimo prijavite se da biste nastavili."
+  errors:
+    messages:
+      already_confirmed: "je već potvrđen, molimo pokušajte se prijaviti"
+      confirmation_period_expired: "treba biti potvrđen unutar %{period}, molimo zatražite novi"
+      expired: "je istekao, molimo zatražite novi"
+      not_found: "nije pronađen"
+      not_locked: "nije bio zaključan"
+      not_saved:
+        one: "1 greška je spriječila da se ovaj %{resource} sačuva:"
+        other: "%{count} greške su spriječile da se ovaj %{resource} sačuva:"
+      name_surname_blank: "Ime i prezime ne mogu biti prazni."
+      name_surname_invalid: "Ime i prezime moraju sadržavati barem jedan razmak i samo slova."
+      gsm_invalid: "GSM mora sadržavati samo brojeve."
+      profile_image_too_large: "Veličina profilne slike mora biti manja od 10MB."
+      profile_image_invalid_format: "Profilna slika mora biti u JPG, JPEG ili PNG formātā."

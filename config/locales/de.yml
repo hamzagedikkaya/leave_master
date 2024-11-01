@@ -1,0 +1,17 @@
+de:
+  controllers:
+    teams:
+      create:
+        created: "Das Team wurde erfolgreich erstellt."
+      update:
+        updated: "Das Team wurde erfolgreich aktualisiert."
+      destroy:
+        deleted: "Das Team wurde erfolgreich gelöscht."
+    roles:
+      create:
+        created: "Die Rolle wurde erfolgreich erstellt."
+      update:
+        updated: "Die Rolle wurde erfolgreich aktualisiert."
+  models:
+    user:
+      locale_invalid: "%{value} ist kein gültiger Ort."

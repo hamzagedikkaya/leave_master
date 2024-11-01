@@ -1,0 +1,17 @@
+kk:
+  controllers:
+    teams:
+      create:
+        created: "Команда сәтті құрылды."
+      update:
+        updated: "Команда сәтті жаңартылды."
+      destroy:
+        deleted: "Команда сәтті жойылды."
+    roles:
+      create:
+        created: "Роль сәтті құрылды."
+      update:
+        updated: "Роль сәтті жаңартылды."
+  models:
+    user:
+      locale_invalid: "%{value} жарамсыз тіл."

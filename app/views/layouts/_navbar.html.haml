@@ -1,0 +1,38 @@
+%nav.bg-gray-800
+  .mx-auto.max-w-7xl.px-2.sm:px-6.lg:px-8
+    .relative.flex.h-16.items-center.justify-between
+      .flex.flex-1.items-center.justify-center.sm:items-stretch.sm:justify-start
+        .flex.flex-shrink-0.items-center
+          = link_to do
+            %img.h-8.w-auto{ src: "https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500", alt: "Your Company" }
+        .hidden.sm:ml-6.sm:block
+          .flex.space-x-4
+            = link_to "Home Page", root_path, class: "rounded-md py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+      .absolute.inset-y-0.right-0.flex.items-center.pr-2.sm:static.sm:inset-auto.sm:ml-6.sm:pr-0.space-x-4
+        - if current_user
+          = link_to "Edit Account", edit_user_registration_path, class: "text-white hover:text-gray-300"
+          = button_to "Sign Out", destroy_user_session_path, method: :delete, class: "bg-white text-blue-500 py-2 px-4 rounded hover:bg-gray-200"
+        - else
+          = link_to "Sign Up", new_user_registration_path, class: "text-white hover:text-gray-300"
+          = link_to "Sign In", new_user_session_path, class: "text-white hover:text-gray-300"
+
+      .relative.inline-block.text-left#language-dropdown
+        %button.inline-flex.justify-center.w-full.rounded-md.border.border-gray-300.shadow-sm.px-4.py-2.bg-white.text-sm.font-medium.text-gray-700.hover:bg-gray-50{ aria: { haspopup: true, expanded: true } }
+          Select Language
+          %svg{ style: "margin-right: 1px; margin-left: 2px;", class: "h-5 w-5", xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", aria: { hidden: true }}
+            %path{ strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M7 10l5 5 5-5H7z" }
+
+        .hidden.z-10.mt-2.w-56.rounded-md.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5{ role: "menu", aria: { orientation: "vertical", labelledby: "language-dropdown" } }
+          .py-1{ role: "none", id: "language-dropdown-content" }
+            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
+              %img.inline-block.w-4.h-4.mr-2{ src: "tr.png", alt: "Türkçe" } Türkçe
+            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
+              %img.inline-block.w-4.h-4.mr-2{ src: "en.png", alt: "English" } English
+            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
+              %img.inline-block.w-4.h-4.mr-2{ src: "ka.png", alt: "ქართული" } ქართული
+            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
+              %img.inline-block.w-4.h-4.mr-2{ src: "fr.png", alt: "Français" } Français
+            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
+              %img.inline-block.w-4.h-4.mr-2{ src: "de.png", alt: "Deutsch" } Deutsch
+
+    = javascript_pack_tag 'navbar'

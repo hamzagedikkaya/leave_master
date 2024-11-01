@@ -1,15 +1,17 @@
 tr:
-  users:
-    user_team_not_found: "Kullanıcı veya takım bulunamadı."
-  teams:
-    create:
-      created: "Takım başarıyla oluşturuldu."
-    update:
-      updated: "Takım başarıyla güncellendi."
-    destroy:
-      deleted: "Takım başarıyla silindi."
-  roles:
-    create:
-      created: "Rol başarıyla oluşturuldu."
-    update:
-      updated: "Rol başarıyla güncellendi."
+  controllers:
+    teams:
+      create:
+        created: "Takım başarıyla oluşturuldu."
+      update:
+        updated: "Takım başarıyla güncellendi."
+      destroy:
+        deleted: "Takım başarıyla silindi."
+    roles:
+      create:
+        created: "Rol başarıyla oluşturuldu."
+      update:
+        updated: "Rol başarıyla güncellendi."
+  models:
+    user:
+      locale_invalid: "%{value} geçersiz bir dil."

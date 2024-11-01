@@ -1,0 +1,17 @@
+mk:
+  controllers:
+    teams:
+      create:
+        created: "Тимот е успешно создаден."
+      update:
+        updated: "Тимот е успешно ажуриран."
+      destroy:
+        deleted: "Тимот е успешно избришан."
+    roles:
+      create:
+        created: "Улогата е успешно создадена."
+      update:
+        updated: "Улогата е успешно ажурирана."
+  models:
+    user:
+      locale_invalid: "%{value} не е валиден јазик."

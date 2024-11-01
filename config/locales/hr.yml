@@ -1,0 +1,17 @@
+hr:
+  controllers:
+    teams:
+      create:
+        created: "Tim je uspješno stvoren."
+      update:
+        updated: "Tim je uspješno ažuriran."
+      destroy:
+        deleted: "Tim je uspješno obrisan."
+    roles:
+      create:
+        created: "Uloga je uspješno stvorena."
+      update:
+        updated: "Uloga je uspješno ažurirana."
+  models:
+    user:
+      locale_invalid: "%{value} nije važeći jezik."

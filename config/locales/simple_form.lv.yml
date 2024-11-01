@@ -1,0 +1,28 @@
+lv:
+  simple_form:
+    "yes": 'Jā'
+    "no": 'Nē'
+    required:
+      text: 'obligāts'
+      mark: '*'
+    error_notification:
+      default_message: "Lūdzu, pārskatiet zemāk minētās problēmas:"
+    # Piemēri
+    # labels:
+    #   defaults:
+    #     password: 'Parole'
+    #   user:
+    #     new:
+    #       email: 'E-pasts, lai pieteiktos.'
+    #     edit:
+    #       email: 'E-pasts.'
+    # hints:
+    #   defaults:
+    #     username: 'Lietotājvārds, lai pieteiktos.'
+    #     password: 'Bez īpašām rakstzīmēm, lūdzu.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Vairāk negribu teikt'
+    # prompts:
+    #   defaults:
+    #     age: 'Izvēlieties savu vecumu'

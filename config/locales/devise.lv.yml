@@ -1,0 +1,70 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+lv:
+  devise:
+    confirmations:
+      confirmed: "Jūsu e-pasta adrese ir veiksmīgi apstiprināta."
+      send_instructions: "Jūs saņemsiet e-pastu ar instrukcijām, kā apstiprināt savu e-pasta adresi."
+      send_paranoid_instructions: "Ja jūsu e-pasta adrese ir mūsu datubāzē, jūs saņemsiet e-pastu ar apstiprināšanas instrukcijām."
+    failure:
+      already_authenticated: "Jūs jau esat pierakstījies."
+      inactive: "Jūsu konts vēl nav aktīvs."
+      invalid: "Nederīgs %{authentication_keys} vai parole."
+      locked: "Jūsu konts ir bloķēts."
+      last_attempt: "Vēl viens mēģinājums, un jūsu konts tiks bloķēts."
+      not_found_in_database: "Nederīgs %{authentication_keys} vai parole."
+      timeout: "Jūsu sesija ir beigusies. Lai turpinātu, lūdzu, pierakstieties vēlreiz."
+      unauthenticated: "Jums ir jāpiesakās, lai turpinātu."
+      unconfirmed: "Lūdzu, apstipriniet savu e-pasta adresi, lai turpinātu."
+    mailer:
+      confirmation_instructions:
+        subject: "Apstiprināšanas instrukcijas"
+      reset_password_instructions:
+        subject: "Paroles atiestatīšanas instrukcijas"
+      unlock_instructions:
+        subject: "Atbloķēšanas instrukcijas"
+      email_changed:
+        subject: "E-pasta adrese mainīta"
+      password_change:
+        subject: "Parole mainīta"
+    omniauth_callbacks:
+      failure: "Autentifikācija ar %{kind} neizdevās: \"%{reason}\"."
+      success: "Veiksmīga autentifikācija ar %{kind} kontu."
+    passwords:
+      no_token: "Jūs nevarat piekļūt šai lapai, neizmantojot paroles atiestatīšanas e-pastu. Pārliecinieties, ka izmantojat pilnu e-pasta saiti."
+      send_instructions: "Jūs saņemsiet e-pastu ar instrukcijām, kā atiestatīt paroli."
+      send_paranoid_instructions: "Ja jūsu e-pasta adrese ir mūsu datubāzē, jūs saņemsiet paroles atiestatīšanas saiti."
+      updated: "Jūsu parole ir veiksmīgi mainīta. Tagad esat pieteicies."
+      updated_not_active: "Jūsu parole ir veiksmīgi mainīta."
+    registrations:
+      destroyed: "Atā! Jūsu konts ir veiksmīgi dzēsts. Ceram jūs atkal redzēt!"
+      signed_up: "Laipni lūdzam! Reģistrācija veiksmīga."
+      signed_up_but_inactive: "Reģistrācija veiksmīga, bet jūsu konts nav aktīvs."
+      signed_up_but_locked: "Reģistrācija veiksmīga, bet jūsu konts ir bloķēts."
+      signed_up_but_unconfirmed: "Apstiprināšanas saite ir nosūtīta uz jūsu e-pastu. Lūdzu, sekojiet norādījumiem, lai aktivizētu kontu."
+      update_needs_confirmation: "Jūsu konts ir veiksmīgi atjaunināts, bet mums ir jāapstiprina jūsu jaunā e-pasta adrese. Lūdzu, pārbaudiet savu e-pastu un sekojiet apstiprināšanas saitei."
+      updated: "Jūsu konts ir veiksmīgi atjaunināts."
+      updated_but_not_signed_in: "Jūsu konts ir veiksmīgi atjaunināts, taču, mainot paroli, jums ir jāpiesakās vēlreiz."
+    sessions:
+      signed_in: "Veiksmīga pieteikšanās."
+      signed_out: "Veiksmīga izrakstīšanās."
+      already_signed_out: "Jūs jau esat izrakstījies."
+    unlocks:
+      send_instructions: "Jūs saņemsiet e-pastu ar instrukcijām, kā atbloķēt kontu."
+      send_paranoid_instructions: "Ja jūsu konts pastāv, jūs saņemsiet e-pastu ar atbloķēšanas instrukcijām."
+      unlocked: "Jūsu konts ir veiksmīgi atbloķēts. Lai turpinātu, lūdzu, pierakstieties."
+  errors:
+    messages:
+      already_confirmed: "Jau apstiprināts, lūdzu, mēģiniet pierakstīties"
+      confirmation_period_expired: "Ir jāapstiprina %{period} laikā, lūdzu, pieprasiet jaunu apstiprinājumu"
+      expired: "ir beidzies, lūdzu, pieprasiet jaunu"
+      not_found: "nav atrasts"
+      not_locked: "nebija bloķēts"
+      not_saved:
+        one: "Šo %{resource} nevarēja saglabāt: 1 kļūda"
+        other: "%{count} kļūdas novērsa %{resource} saglabāšanu:"
+      name_surname_blank: "Vārds un uzvārds nevar būt tukšs."
+      name_surname_invalid: "Vārdam un uzvārdam jābūt tikai burtiem un jāiekļauj vismaz viena atstarpe."
+      gsm_invalid: "GSM jābūt tikai cipariem."
+      profile_image_too_large: "Profila attēlam jābūt mazākam par 10 MB."
+      profile_image_invalid_format: "Profila attēlam jābūt JPG, JPEG vai PNG formātā."

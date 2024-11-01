@@ -1,0 +1,17 @@
+ka:
+  controllers:
+    teams:
+      create:
+        created: "გუნდმა წარმატებით შექმნა."
+      update:
+        updated: "გუნდმა წარმატებით განაახლა."
+      destroy:
+        deleted: "გუნდმა წარმატებით წაშალა."
+    roles:
+      create:
+        created: "როლი წარმატებით შეიქმნა."
+      update:
+        updated: "როლი წარმატებით განახლდა."
+  models:
+    user:
+      locale_invalid: "%{value} არ არის ვალიდური ენა."
