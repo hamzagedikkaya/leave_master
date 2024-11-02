@@ -15,7 +15,7 @@ module LeaveMaster
     # TR = Turkish, EN = English, De = German, Fr = French, KA = Georgian
     # HR = Crotian, KK = Kazakh, LV = Latvian, MK = Macedonian, RU = Russian
     config.i18n.available_locales = %i[tr en de fr ka hr kk lv mk ru]
-    config.i18n.default_locale = :tr
+    config.i18n.default_locale = :en
     config.i18n.load_path += Rails.root.glob("config/locales/**/*.{rb,yml}")
 
     config.autoload_lib(ignore: %w[assets tasks])
