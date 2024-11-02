@@ -1,0 +1,70 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+tr:
+  devise:
+    confirmations:
+      confirmed: "E-posta adresiniz başarıyla doğrulandı."
+      send_instructions: "E-posta adresinizi nasıl doğrulayacağınıza dair talimatların yer aldığı bir e-posta alacaksınız."
+      send_paranoid_instructions: "E-posta adresiniz veritabanımızda mevcutsa, doğrulama talimatlarının yer aldığı bir e-posta alacaksınız."
+    failure:
+      already_authenticated: "Zaten giriş yaptınız."
+      inactive: "Hesabınız henüz aktif değil."
+      invalid: "Geçersiz %{authentication_keys} veya şifre."
+      locked: "Hesabınız kilitli."
+      last_attempt: "Hesabınızın kilitlenmesine bir deneme kaldı."
+      not_found_in_database: "Geçersiz %{authentication_keys} veya şifre."
+      timeout: "Oturumunuzun süresi doldu. Devam etmek için tekrar giriş yapın."
+      unauthenticated: "Devam etmeden önce giriş yapmalısınız."
+      unconfirmed: "Devam etmeden önce e-posta adresinizi doğrulamalısınız."
+    mailer:
+      confirmation_instructions:
+        subject: "Doğrulama talimatları"
+      reset_password_instructions:
+        subject: "Şifre sıfırlama talimatları"
+      unlock_instructions:
+        subject: "Kilidi açma talimatları"
+      email_changed:
+        subject: "E-posta Değiştirildi"
+      password_change:
+        subject: "Şifre Değiştirildi"
+    omniauth_callbacks:
+      failure: "%{kind} ile kimlik doğrulama başarısız: \"%{reason}\"."
+      success: "%{kind} hesabı ile başarıyla kimlik doğrulandı."
+    passwords:
+      no_token: "Bu sayfaya, şifre sıfırlama e-postasından gelmeden erişemezsiniz. E-posta bağlantısının tamamını kullandığınızdan emin olun."
+      send_instructions: "Şifrenizi nasıl sıfırlayacağınıza dair talimatların yer aldığı bir e-posta alacaksınız."
+      send_paranoid_instructions: "E-posta adresiniz veritabanımızda mevcutsa, şifre kurtarma bağlantısı size gönderilecektir."
+      updated: "Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız."
+      updated_not_active: "Şifreniz başarıyla değiştirildi."
+    registrations:
+      destroyed: "Hoşçakalın! Hesabınız başarıyla iptal edildi. Yakında tekrar görüşmek dileğiyle."
+      signed_up: "Hoş geldiniz! Başarıyla kaydoldunuz."
+      signed_up_but_inactive: "Başarıyla kaydoldunuz. Ancak, hesabınız aktif olmadığı için giriş yapamadınız."
+      signed_up_but_locked: "Başarıyla kaydoldunuz. Ancak, hesabınız kilitli olduğu için giriş yapamadınız."
+      signed_up_but_unconfirmed: "E-posta adresinize bir doğrulama bağlantısı gönderildi. Lütfen hesabınızı etkinleştirmek için bağlantıyı takip edin."
+      update_needs_confirmation: "Hesabınızı başarıyla güncellediniz, ancak yeni e-posta adresinizi doğrulamalıyız. Lütfen e-postanızı kontrol edin ve doğrulama bağlantısını takip edin."
+      updated: "Hesabınız başarıyla güncellendi."
+      updated_but_not_signed_in: "Hesabınız başarıyla güncellendi ancak şifreniz değiştirildiği için tekrar giriş yapmanız gerekmektedir."
+    sessions:
+      signed_in: "Başarıyla giriş yapıldı."
+      signed_out: "Başarıyla çıkış yapıldı."
+      already_signed_out: "Zaten çıkış yaptınız."
+    unlocks:
+      send_instructions: "Hesabınızın kilidini nasıl açacağınız hakkında talimatların yer aldığı bir e-posta alacaksınız."
+      send_paranoid_instructions: "Hesabınız mevcutsa, kilidi açma talimatlarının yer aldığı bir e-posta alacaksınız."
+      unlocked: "Hesabınız başarıyla kilit açıldı. Devam etmek için giriş yapın."
+  errors:
+    messages:
+      already_confirmed: "Zaten doğrulandı, lütfen giriş yapmayı deneyin"
+      confirmation_period_expired: "%{period} içinde doğrulanması gerekiyor, lütfen yeni bir tane isteyin"
+      expired: "süresi doldu, lütfen yeni bir tane isteyin"
+      not_found: "bulunamadı"
+      not_locked: "kilitli değildi"
+      not_saved:
+        one: "Bu %{resource} kaydedilemedi: 1 hata"
+        other: "%{count} hata bu %{resource}'in kaydedilmesini engelledi:"
+      name_surname_blank: "Ad ve soyadı boş bırakılamaz."
+      name_surname_invalid: "Ad ve soyad sadece harflerden oluşmalı ve en az bir boşluk içermelidir."
+      gsm_invalid: "GSM sadece rakamlardan oluşmalıdır."
+      profile_image_too_large: "Profil resmi 10MB'den küçük olmalıdır."
+      profile_image_invalid_format: "Profil resmi JPG, JPEG veya PNG formatında olmalıdır."

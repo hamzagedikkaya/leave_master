@@ -10,13 +10,20 @@ Bundler.require(*Rails.groups)
 
 module LeaveMaster
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
 
-    # Please, add to the `ignore` list any other `lib` subdirectories that do
-    # not contain `.rb` files, or that should not be reloaded or eager loaded.
-    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    # TR = Turkish, EN = English, De = German, Fr = French, KA = Georgian
+    # HR = Crotian, KK = Kazakh, LV = Latvian, MK = Macedonian, RU = Russian
+    config.i18n.available_locales = %i[tr en de fr ka hr kk lv mk ru]
+    config.i18n.default_locale = :tr
+    config.i18n.load_path += Rails.root.glob("config/locales/**/*.{rb,yml}")
+
     config.autoload_lib(ignore: %w[assets tasks])
+
+    config.time_zone = "Istanbul"
+
+    config.active_job.queue_adapter = :sidekiq
+    config.exceptions_app = routes
 
     # Configuration for the application, engines, and railties goes here.
     #

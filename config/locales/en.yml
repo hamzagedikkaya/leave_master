@@ -1,15 +1,17 @@
 en:
-  users:
-    user_team_not_found: "User or team not found."
-  teams:
-    create:
-      created: "Team was successfully created."
-    update:
-      updated: "Team was successfully updated."
-    destroy:
-      deleted: "Team was successfully deleted."
-  roles:
-    create:
-      created: "Role was successfully created."
-    update:
-      updated: "Role was successfully updated."
+  controllers:
+    teams:
+      create:
+        created: "Team was successfully created."
+      update:
+        updated: "Team was successfully updated."
+      destroy:
+        deleted: "Team was successfully deleted."
+    roles:
+      create:
+        created: "Role was successfully created."
+      update:
+        updated: "Role was successfully updated."
+  models:
+    user:
+      locale_invalid: "%{value} is not a valid locale"

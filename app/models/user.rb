@@ -18,6 +18,13 @@ class User < ApplicationRecord
   validates :date_of_birth, presence: true
   validate :acceptable_image
 
+  validates :locale, inclusion: {
+    in: %w[en hr mk kk lv de fr ka ru kz],
+    message: lambda { |_object, data|
+      I18n.t("models.user.locale_invalid", value: data[:value])
+    }
+  }, allow_blank: true
+
   private
 
   def acceptable_image

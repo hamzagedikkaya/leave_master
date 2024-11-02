@@ -1,0 +1,28 @@
+kk:
+  simple_form:
+    "yes": 'Иә'
+    "no": 'Жоқ'
+    required:
+      text: 'қажет'
+      mark: '*'
+    error_notification:
+      default_message: "Төмендегі мәселелерді тексеріңіз:"
+    # Мысалдар
+    # labels:
+    #   defaults:
+    #     password: 'Құпия сөз'
+    #   user:
+    #     new:
+    #       email: 'Кіру үшін электрондық пошта.'
+    #     edit:
+    #       email: 'Электрондық пошта.'
+    # hints:
+    #   defaults:
+    #     username: 'Кіруге арналған пайдаланушы аты.'
+    #     password: 'Арнайы символдар жоқ, өтінемін.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Айтпай-ақ қойыңыз'
+    # prompts:
+    #   defaults:
+    #     age: 'Жасыңызды таңдаңыз'

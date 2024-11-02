@@ -1,0 +1,28 @@
+ka:
+  simple_form:
+    "yes": 'კი'
+    "no": 'არა'
+    required:
+      text: 'მოსავალია'
+      mark: '*'
+    error_notification:
+      default_message: "გთხოვთ გადაამოწმოთ ქვემოთ ხსენებული პრობლემები:"
+    # მაგალითები
+    # labels:
+    #   defaults:
+    #     password: 'პაროლი'
+    #   user:
+    #     new:
+    #       email: 'ელ. ფოსტა შესვლისთვის.'
+    #     edit:
+    #       email: 'ელ. ფოსტა.'
+    # hints:
+    #   defaults:
+    #     username: 'მომხმარებლის სახელი შესვლისთვის.'
+    #     password: 'არასასურველი სიმბოლოები, გთხოვთ.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'პირადად არ ვიტყვი'
+    # prompts:
+    #   defaults:
+    #     age: 'აირჩიეთ თქვენი ასაკი'

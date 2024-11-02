@@ -1,0 +1,28 @@
+mk:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Не'
+    required:
+      text: 'потребно'
+      mark: '*'
+    error_notification:
+      default_message: "Ве молиме проверете ги проблемите подолу:"
+    # Примери
+    # labels:
+    #   defaults:
+    #     password: 'Лозинка'
+    #   user:
+    #     new:
+    #       email: 'Е-пошта за пријавување.'
+    #     edit:
+    #       email: 'Е-пошта.'
+    # hints:
+    #   defaults:
+    #     username: 'Корисничко име за пријавување.'
+    #     password: 'Без специјални знаци, ве молиме.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Побарајте не да кажувате'
+    # prompts:
+    #   defaults:
+    #     age: 'Изберете ја вашата возраст'

@@ -1,0 +1,70 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+de:
+  devise:
+    confirmations:
+      confirmed: "Ihre E-Mail-Adresse wurde erfolgreich bestätigt."
+      send_instructions: "Sie erhalten in Kürze eine E-Mail mit Anweisungen zur Bestätigung Ihrer E-Mail-Adresse."
+      send_paranoid_instructions: "Falls Ihre E-Mail-Adresse in unserer Datenbank existiert, erhalten Sie eine E-Mail mit Anweisungen zur Bestätigung Ihrer E-Mail-Adresse."
+    failure:
+      already_authenticated: "Sie sind bereits angemeldet."
+      inactive: "Ihr Konto ist noch nicht aktiviert."
+      invalid: "Ungültige(r) %{authentication_keys} oder Passwort."
+      locked: "Ihr Konto ist gesperrt."
+      last_attempt: "Sie haben noch einen Versuch, bevor Ihr Konto gesperrt wird."
+      not_found_in_database: "Ungültige(r) %{authentication_keys} oder Passwort."
+      timeout: "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an, um fortzufahren."
+      unauthenticated: "Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren."
+      unconfirmed: "Sie müssen Ihre E-Mail-Adresse bestätigen, bevor Sie fortfahren."
+    mailer:
+      confirmation_instructions:
+        subject: "Bestätigungsanweisungen"
+      reset_password_instructions:
+        subject: "Anweisungen zum Zurücksetzen des Passworts"
+      unlock_instructions:
+        subject: "Anweisungen zum Entsperren"
+      email_changed:
+        subject: "E-Mail geändert"
+      password_change:
+        subject: "Passwort geändert"
+    omniauth_callbacks:
+      failure: "Authentifizierung über %{kind} konnte nicht durchgeführt werden: \"%{reason}\"."
+      success: "Erfolgreich über %{kind}-Konto authentifiziert."
+    passwords:
+      no_token: "Sie können diese Seite nur über den Link in der Passwort-Zurücksetzungs-E-Mail aufrufen. Vergewissern Sie sich, dass Sie die vollständige URL verwendet haben."
+      send_instructions: "Sie erhalten in Kürze eine E-Mail mit Anweisungen zum Zurücksetzen Ihres Passworts."
+      send_paranoid_instructions: "Falls Ihre E-Mail-Adresse in unserer Datenbank existiert, erhalten Sie in Kürze einen Link zum Zurücksetzen Ihres Passworts."
+      updated: "Ihr Passwort wurde erfolgreich geändert. Sie sind jetzt angemeldet."
+      updated_not_active: "Ihr Passwort wurde erfolgreich geändert."
+    registrations:
+      destroyed: "Auf Wiedersehen! Ihr Konto wurde erfolgreich gelöscht. Wir hoffen, Sie bald wiederzusehen."
+      signed_up: "Willkommen! Sie haben sich erfolgreich registriert."
+      signed_up_but_inactive: "Sie haben sich erfolgreich registriert, aber Ihr Konto ist noch nicht aktiv."
+      signed_up_but_locked: "Sie haben sich erfolgreich registriert, aber Ihr Konto ist gesperrt."
+      signed_up_but_unconfirmed: "Eine E-Mail mit einem Bestätigungslink wurde an Ihre E-Mail-Adresse gesendet. Bitte folgen Sie dem Link, um Ihr Konto zu aktivieren."
+      update_needs_confirmation: "Ihr Konto wurde erfolgreich aktualisiert, aber wir müssen Ihre neue E-Mail-Adresse bestätigen. Bitte prüfen Sie Ihre E-Mails und folgen Sie dem Bestätigungslink."
+      updated: "Ihr Konto wurde erfolgreich aktualisiert."
+      updated_but_not_signed_in: "Ihr Konto wurde erfolgreich aktualisiert, aber da Ihr Passwort geändert wurde, müssen Sie sich erneut anmelden."
+    sessions:
+      signed_in: "Erfolgreich angemeldet."
+      signed_out: "Erfolgreich abgemeldet."
+      already_signed_out: "Bereits abgemeldet."
+    unlocks:
+      send_instructions: "Sie erhalten in Kürze eine E-Mail mit Anweisungen zum Entsperren Ihres Kontos."
+      send_paranoid_instructions: "Falls Ihr Konto existiert, erhalten Sie in Kürze eine E-Mail mit Anweisungen zum Entsperren."
+      unlocked: "Ihr Konto wurde erfolgreich entsperrt. Bitte melden Sie sich an, um fortzufahren."
+  errors:
+    messages:
+      already_confirmed: "wurde bereits bestätigt, bitte melden Sie sich an"
+      confirmation_period_expired: "muss innerhalb von %{period} bestätigt werden, bitte fordern Sie einen neuen an"
+      expired: "ist abgelaufen, bitte fordern Sie einen neuen an"
+      not_found: "nicht gefunden"
+      not_locked: "war nicht gesperrt"
+      not_saved:
+        one: "1 Fehler hat verhindert, dass %{resource} gespeichert wurde:"
+        other: "%{count} Fehler haben verhindert, dass %{resource} gespeichert wurde:"
+      name_surname_blank: "Name und Nachname dürfen nicht leer sein."
+      name_surname_invalid: "Name und Nachname dürfen nur Buchstaben enthalten und müssen mindestens ein Leerzeichen enthalten."
+      gsm_invalid: "GSM darf nur aus Zahlen bestehen."
+      profile_image_too_large: "Das Profilbild darf maximal 10 MB groß sein."
+      profile_image_invalid_format: "Das Profilbild muss im JPG-, JPEG- oder PNG-Format sein."

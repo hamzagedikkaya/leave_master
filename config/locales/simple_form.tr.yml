@@ -1,0 +1,28 @@
+tr:
+  simple_form:
+    "yes": 'Evet'
+    "no": 'Hayır'
+    required:
+      text: 'zorunlu'
+      mark: '*'
+    error_notification:
+      default_message: "Lütfen aşağıdaki sorunları gözden geçirin:"
+    # Örnekler
+    # labels:
+    #   defaults:
+    #     password: 'Şifre'
+    #   user:
+    #     new:
+    #       email: 'Giriş yapmak için e-posta.'
+    #     edit:
+    #       email: 'E-posta.'
+    # hints:
+    #   defaults:
+    #     username: 'Giriş yapmak için kullanıcı adı.'
+    #     password: 'Özel karakter yok, lütfen.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Söylemek istemiyorum'
+    # prompts:
+    #   defaults:
+    #     age: 'Yaşınızı seçin'
