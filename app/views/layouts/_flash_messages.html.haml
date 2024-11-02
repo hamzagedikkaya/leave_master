@@ -1,0 +1,11 @@
+- if flash[:notice]
+  .bg-green-700.text-white.p-4.rounded-md.mb-4.flex.justify-between.items-center{ role: "alert" }
+    %span= flash[:notice]
+    %button.ml-4.text-white{ type: "button", onclick: "this.parentElement.style.display='none'" }
+      &times;
+
+- if flash[:alert]
+  .bg-yellow-400.text-white.p-4.rounded-md.mb-4.flex.justify-between.items-center{ role: "alert" }
+    %span= flash[:alert]
+    %button.ml-4.text-white{ type: "button", onclick: "this.parentElement.style.display='none'" }
+      &times;
