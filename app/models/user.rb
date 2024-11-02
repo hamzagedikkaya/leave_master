@@ -3,7 +3,8 @@
 class User < ApplicationRecord
   rolify
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :two_factor_authenticatable, otp_secret_encryption_key: ENV.fetch("OTP_SECRET_KEY")
 
   has_one_attached :profile_image
 
@@ -24,6 +25,22 @@ class User < ApplicationRecord
       I18n.t("models.user.locale_invalid", value: data[:value])
     }
   }, allow_blank: true
+
+  def generate_otp_secret
+    self.otp_secret = ROTP::Base32.random
+    save!
+  end
+
+  def verify_otp(otp_code)
+    totp = ROTP::TOTP.new(otp_secret)
+    totp.verify(otp_code)
+  end
+
+  def generate_qr_code
+    self.otp_secret ||= ROTP::Base32.random
+    totp = ROTP::TOTP.new(otp_secret)
+    totp.provisioning_uri(email)
+  end
 
   private
 

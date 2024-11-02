@@ -1,0 +1,7 @@
+%p
+  Lütfen Google Authenticator uygulamanızdan doğrulama kodunu girin:
+
+= form_with url: verify_two_factor_path, method: :post do |f|
+  = f.label :otp_code, "Doğrulama Kodu"
+  = f.text_field :otp_code
+  = f.submit "Doğrula"

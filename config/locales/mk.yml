@@ -1,5 +1,8 @@
 mk:
   controllers:
+    two_factor_authentication:
+      success: "Успешен влез! Добредојдовте."
+      invalid_code: "Невалиден код за потврду. Ве молиме обидете се повторно."
     teams:
       create:
         created: "Тимот е успешно создаден."

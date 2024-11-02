@@ -73,3 +73,11 @@ gem "mobility", "~> 1.2"
 gem "webpacker", "~> 5.4"
 
 gem "dotenv-rails", "~> 3.1"
+
+gem "devise-two-factor", "~> 6.0"
+
+gem "rqrcode", "~> 2.2"
+
+gem "rotp", "~> 6.3"
+
+gem "byebug", "~> 11.1", groups: %i[development test]

@@ -1,0 +1,12 @@
+%h2 İki Faktörlü Kimlik Doğrulama Ayarları
+%p Google Authenticator uygulamasını kullanarak aşağıdaki QR kodunu tarayın:
+
+= image_tag(RQRCode::QRCode.new(@user.generate_qr_code).as_png(size: 200).to_data_url, alt: 'QR Code')
+
+%p
+  Lütfen Google Authenticator uygulamanızdan doğrulama kodunu girin:
+
+= form_with url: verify_two_factor_path, method: :post do |f|
+  = f.label :otp_code, "Doğrulama Kodu"
+  = f.text_field :otp_code
+  = f.submit "Doğrula"

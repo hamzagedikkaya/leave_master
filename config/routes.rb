@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations" }
   root "main#home"
 
-  resources :users
+  resources :users do
+    get "two_factor_setup"
+    post "verify_two_factor"
+  end
   resources :roles
   resources :teams
 
