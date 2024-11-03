@@ -15,3 +15,9 @@ de:
   models:
     user:
       locale_invalid: "%{value} ist kein gültiger Ort."
+  views:
+    navbar:
+      edit_account: "Konto bearbeiten"
+      sign_out: "Abmelden"
+      sign_up: "Registrieren"
+      sign_in: "Anmelden"

@@ -15,3 +15,9 @@ ru:
   models:
     user:
       locale_invalid: "%{value} не является допустимым языком."
+  views:
+    navbar:
+      edit_account: "Редактировать аккаунт"
+      sign_out: "Выйти"
+      sign_up: "Зарегистрироваться"
+      sign_in: "Войти"

@@ -26,5 +26,8 @@ Style/Documentation:
 Rails/I18nLazyLookup:
   Enabled: false
 
+Metrics/AbcSize:
+  Enabled: false
+
 require:
   - rubocop-rails                  # Enable rubocop-rails extension

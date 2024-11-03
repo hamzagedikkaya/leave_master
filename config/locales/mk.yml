@@ -15,3 +15,9 @@ mk:
   models:
     user:
       locale_invalid: "%{value} не е валиден јазик."
+  views:
+    navbar:
+      edit_account: "Уреди сметка"
+      sign_out: "Излези"
+      sign_up: "Пријави се"
+      sign_in: "Најави се"

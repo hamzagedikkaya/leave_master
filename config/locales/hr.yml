@@ -15,3 +15,9 @@ hr:
   models:
     user:
       locale_invalid: "%{value} nije važeći jezik."
+  views:
+    navbar:
+      edit_account: "Uredi račun"
+      sign_out: "Odjavi se"
+      sign_up: "Prijavi se"
+      sign_in: "Prijavi se"

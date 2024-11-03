@@ -15,3 +15,9 @@ kk:
   models:
     user:
       locale_invalid: "%{value} жарамсыз тіл."
+  views:
+    navbar:
+      edit_account: "Есепті өңдеу"
+      sign_out: "Шығу"
+      sign_up: "Тіркелу"
+      sign_in: "Кіру"

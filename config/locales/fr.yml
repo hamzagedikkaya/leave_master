@@ -15,3 +15,9 @@ fr:
   models:
     user:
       locale_invalid: "%{value} n'est pas une langue valide."
+  views:
+    navbar:
+      edit_account: "Modifier le compte"
+      sign_out: "Se déconnecter"
+      sign_up: "S'inscrire"
+      sign_in: "Se connecter"
