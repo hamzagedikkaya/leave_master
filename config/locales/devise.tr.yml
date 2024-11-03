@@ -49,6 +49,10 @@ tr:
       signed_in: "Başarıyla giriş yapıldı."
       signed_out: "Başarıyla çıkış yapıldı."
       already_signed_out: "Zaten çıkış yaptınız."
+      invalid: "Kullanıcı adı veya şifre hatalı."
+      user_not_found: "Kullanıcı bulunamadı."
+      invalid_otp: "Geçersiz doğrulama kodu."
+      two_factor_success: "İki faktörlü kimlik doğrulama başarılı."
     unlocks:
       send_instructions: "Hesabınızın kilidini nasıl açacağınız hakkında talimatların yer aldığı bir e-posta alacaksınız."
       send_paranoid_instructions: "Hesabınız mevcutsa, kilidi açma talimatlarının yer aldığı bir e-posta alacaksınız."

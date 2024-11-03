@@ -1,7 +1,9 @@
-%p
-  Lütfen Google Authenticator uygulamanızdan doğrulama kodunu girin:
+%h2 İki Faktörlü Kimlik Doğrulama
+%p Lütfen iki faktörlü doğrulama kodunuzu girin.
 
 = form_with url: verify_two_factor_path, method: :post do |f|
-  = f.label :otp_code, "Doğrulama Kodu"
-  = f.text_field :otp_code
-  = f.submit "Doğrula"
+  .field
+    = f.label :otp_code, "Doğrulama Kodu"
+    = f.text_field :otp_code, required: true
+  .actions
+    = f.submit "Doğrula"

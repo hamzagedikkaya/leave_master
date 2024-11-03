@@ -49,6 +49,10 @@ hr:
       signed_in: "Uspješno ste se prijavili."
       signed_out: "Uspješno ste se odjavili."
       already_signed_out: "Uspješno ste se odjavili."
+      invalid: "Nevažeće korisničko ime ili lozinka."
+      user_not_found: "Korisnik nije pronađen."
+      invalid_otp: "Nevažeći verifikacijski kod."
+      two_factor_success: "Dvofaktorska autentifikacija uspješna."
     unlocks:
       send_instructions: "U nekoliko minuta primit ćete e-poštu s uputama kako otključati svoj račun."
       send_paranoid_instructions: "Ako vaš račun postoji, primit ćete e-poštu s uputama kako ga otključati u nekoliko minuta."

@@ -49,6 +49,10 @@ fr:
       signed_in: "Connexion réussie."
       signed_out: "Déconnexion réussie."
       already_signed_out: "Vous êtes déjà déconnecté."
+      invalid: "Nom d'utilisateur ou mot de passe invalide."
+      user_not_found: "Utilisateur introuvable."
+      invalid_otp: "Code de vérification invalide."
+      two_factor_success: "L'authentification à deux facteurs a réussi."
     unlocks:
       send_instructions: "Vous recevrez un e-mail contenant les instructions pour déverrouiller votre compte."
       send_paranoid_instructions: "Si votre compte existe, vous recevrez un e-mail avec les instructions pour le déverrouiller."
