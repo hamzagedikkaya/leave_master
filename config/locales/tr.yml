@@ -18,3 +18,9 @@ tr:
   models:
     user:
       locale_invalid: "%{value} geçersiz bir dil."
+  views:
+    navbar:
+      edit_account: "Hesabı Düzenle"
+      sign_out: "Çıkış Yap"
+      sign_up: "Kayıt Ol"
+      sign_in: "Giriş Yap"

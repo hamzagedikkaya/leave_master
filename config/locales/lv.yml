@@ -18,3 +18,9 @@ lv:
   models:
     user:
       locale_invalid: "%{value} nav derīga valoda."
+  views:
+    navbar:
+      edit_account: "Rediģēt kontu"
+      sign_out: "Iziet"
+      sign_up: "Reģistrēties"
+      sign_in: "Pieteikties"
