@@ -1,5 +1,8 @@
 tr:
   controllers:
+    two_factor_authentication:
+      success: "Giriş başarılı! Hoş geldiniz."
+      invalid_code: "Geçersiz doğrulama kodu. Lütfen tekrar deneyin."
     teams:
       create:
         created: "Takım başarıyla oluşturuldu."

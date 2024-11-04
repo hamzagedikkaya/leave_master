@@ -1,0 +1,15 @@
+%h2.text-3xl.font-bold.text-center.text-gray-800.mb-4 İki Faktörlü Kimlik Doğrulama
+%p.text-center.text-gray-600.mb-4 Lütfen Google Authenticator uygulamanızdan aldığınız doğrulama kodunu girin.
+%p.text-center.text-gray-500.mb-6 "Kod, uygulamanızda her 30 saniyede bir yenilenir."
+
+= form_with url: verify_two_factor_path, method: :post, html: { class: "bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-md mx-auto" } do |f|
+  .mb-6
+    = f.label :otp_code, "Doğrulama Kodu", class: "block text-gray-700 text-sm font-semibold mb-2"
+    = f.text_field :otp_code, required: true, class: "shadow-sm appearance-none border border-gray-300 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-400 focus:border-blue-500"
+
+  .flex.items-center.justify-between
+    = f.submit "Doğrula", class: "w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+
+%div.mt-4.text-center
+  %p.text-sm.text-gray-500 "Henüz Google Authenticator kurmadıysanız, lütfen uygulamayı indirerek hesabınızı güvence altına alın."
+  %a.text-blue-500.hover:underline{:href => "https://support.google.com/accounts/answer/1066447"} "Uygulamayı indirmek için buraya tıklayın."

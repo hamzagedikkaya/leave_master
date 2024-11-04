@@ -1,5 +1,8 @@
 ka:
   controllers:
+    two_factor_authentication:
+      success: "ავტორიზაცია წარმატებულია! კეთილი იყოს თქვენი მობრძანება."
+      invalid_code: "არასწორი გადამოწმების კოდი. გთხოვთ, სცადეთ კიდევ ერთხელ."
     teams:
       create:
         created: "გუნდმა წარმატებით შექმნა."

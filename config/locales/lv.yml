@@ -1,5 +1,8 @@
 lv:
   controllers:
+    two_factor_authentication:
+      success: "Pieteikšanās veiksmīga! Laipni lūdzam."
+      invalid_code: "Nederīgs verifikācijas kods. Lūdzu, mēģiniet vēlreiz."
     teams:
       create:
         created: "Komanda tika veiksmīgi izveidota."

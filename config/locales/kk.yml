@@ -1,5 +1,8 @@
 kk:
   controllers:
+    two_factor_authentication:
+      success: "Кіру рәсімі сәтті өтті! Қош келдіңіз."
+      invalid_code: "Жарамсыз растау коды. Қайтадан әрекет етіңіз."
     teams:
       create:
         created: "Команда сәтті құрылды."

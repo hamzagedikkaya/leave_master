@@ -49,6 +49,10 @@ lv:
       signed_in: "Veiksmīga pieteikšanās."
       signed_out: "Veiksmīga izrakstīšanās."
       already_signed_out: "Jūs jau esat izrakstījies."
+      invalid: "Nederīgs lietotājvārds vai parole."
+      user_not_found: "Lietotājs nav atrasts."
+      invalid_otp: "Nederīgs verifikācijas kods."
+      two_factor_success: "Divu faktoru autentifikācija ir veiksmīga."
     unlocks:
       send_instructions: "Jūs saņemsiet e-pastu ar instrukcijām, kā atbloķēt kontu."
       send_paranoid_instructions: "Ja jūsu konts pastāv, jūs saņemsiet e-pastu ar atbloķēšanas instrukcijām."

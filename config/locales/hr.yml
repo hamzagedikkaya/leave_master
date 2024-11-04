@@ -1,5 +1,8 @@
 hr:
   controllers:
+    two_factor_authentication:
+      success: "Prijava uspješna! Dobrodošli."
+      invalid_code: "Nevažeći kod za potvrdu. Pokušajte ponovo."
     teams:
       create:
         created: "Tim je uspješno stvoren."
