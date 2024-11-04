@@ -19,7 +19,7 @@ module Users
     end
 
     # POST /resource
-    def create # rubocop:disable Metrics/AbcSize
+    def create
       build_resource(sign_up_params)
 
       resource.save
@@ -44,7 +44,7 @@ module Users
     # PUT /resource
     # We need to use a copy of the resource because we don't want to change
     # the current user in place.
-    def update # rubocop:disable Metrics/AbcSize
+    def update
       self.resource = resource_class.to_adapter.get!(send(:"current_#{resource_name}").to_key)
       prev_unconfirmed_email = resource.unconfirmed_email if resource.respond_to?(:unconfirmed_email)
 
@@ -63,7 +63,7 @@ module Users
     end
 
     # DELETE /resource
-    def destroy # rubocop:disable Metrics/AbcSize
+    def destroy
       resource.destroy
       Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
       set_flash_message! :notice, :destroyed
