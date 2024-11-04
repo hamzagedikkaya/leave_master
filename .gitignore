@@ -41,9 +41,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-<<<<<<< HEAD
 
 /db/schema.rb
-=======
 .byebug_history
->>>>>>> a3e3dd9b0a66876e2d6388540bac70dedcd57037
+.ruby-version
