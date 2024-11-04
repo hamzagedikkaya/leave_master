@@ -18,3 +18,9 @@ ka:
   models:
     user:
       locale_invalid: "%{value} არ არის ვალიდური ენა."
+  views:
+    navbar:
+      edit_account: "ანგარიშის რედაქტირება"
+      sign_out: "გამოსვლა"
+      sign_up: "რეგისტრაცია"
+      sign_in: "შესვლა"
