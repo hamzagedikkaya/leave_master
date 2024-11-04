@@ -1,5 +1,8 @@
 de:
   controllers:
+    two_factor_authentication:
+      success: "Anmeldung erfolgreich! Willkommen."
+      invalid_code: "Ungültiger Bestätigungscode. Bitte versuchen Sie es erneut."
     teams:
       create:
         created: "Das Team wurde erfolgreich erstellt."

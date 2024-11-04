@@ -49,6 +49,10 @@ de:
       signed_in: "Erfolgreich angemeldet."
       signed_out: "Erfolgreich abgemeldet."
       already_signed_out: "Bereits abgemeldet."
+      invalid: "Ungültiger Benutzername oder Passwort."
+      user_not_found: "Benutzer nicht gefunden."
+      invalid_otp: "Ungültiger Bestätigungscode."
+      two_factor_success: "Die Zwei-Faktor-Authentifizierung war erfolgreich."
     unlocks:
       send_instructions: "Sie erhalten in Kürze eine E-Mail mit Anweisungen zum Entsperren Ihres Kontos."
       send_paranoid_instructions: "Falls Ihr Konto existiert, erhalten Sie in Kürze eine E-Mail mit Anweisungen zum Entsperren."

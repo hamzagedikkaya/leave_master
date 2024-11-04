@@ -1,5 +1,8 @@
 ru:
   controllers:
+    two_factor_authentication:
+      success: "Вход успешен! Добро пожаловать."
+      invalid_code: "Неверный код подтверждения. Пожалуйста, попробуйте еще раз."
     teams:
       create:
         created: "Команда была успешно создана."
