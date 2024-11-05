@@ -1,36 +1,84 @@
-%nav.bg-gray-800
-  .mx-auto.max-w-7xl.px-2.sm:px-6.lg:px-8
-    .relative.flex.h-16.items-center.justify-between
-      .flex.flex-1.items-center.justify-center.sm:items-stretch.sm:justify-start
-        .flex.flex-shrink-0.items-center
-          = link_to do
-            %img.h-8.w-auto{ src: "https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500", alt: "Your Company" }
-        .hidden.sm:ml-6.sm:block
-          .flex.space-x-4
-            = link_to "Home Page", root_path, class: "rounded-md py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-      .absolute.inset-y-0.right-0.flex.items-center.pr-2.sm:static.sm:inset-auto.sm:ml-6.sm:pr-0.space-x-4
-        - if current_user
-          = link_to t('views.navbar.edit_account'), edit_user_registration_path, class: "text-white hover:text-gray-300"
-          = button_to t('views.navbar.sign_out'), destroy_user_session_path, method: :delete, class: "bg-white text-blue-500 py-2 px-4 rounded hover:bg-gray-200"
-        - else
-          = link_to t('views.navbar.sign_up'), new_user_registration_path, class: "text-white hover:text-gray-300"
-          = link_to t('views.navbar.sign_in'), new_user_session_path, class: "text-white hover:text-gray-300"
+%nav.bg-gray-800.text-white.p-4.relative
+  .container.mx-auto.flex.items-center.justify-between
+    %div.flex.items-center
+      %a{ href: root_path, class: "flex items-center" } 
+        %span.text-xl.font-bold.text-white Leave Master
 
-      .relative.inline-block.text-left#language-dropdown
-        %button.inline-flex.justify-center.w-full.rounded-md.border.border-gray-300.shadow-sm.px-4.py-2.bg-white.text-sm.font-medium.text-gray-700.hover:bg-gray-50{ aria: { haspopup: true, expanded: true } }
-          Select Language
-          %svg{ style: "margin-right: 1px; margin-left: 2px;", class: "h-5 w-5", xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", aria: { hidden: true }}
-            %path{ strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M7 10l5 5 5-5H7z" }
+      - if user_signed_in?
+        %button.inline-flex.items-center.p-2.ms-3.text-sm.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700{"aria-controls" => "default-sidebar", "data-drawer-target" => "default-sidebar", "data-drawer-toggle" => "default-sidebar", type: "button", id: "sidebar-toggle"}
+          %i.fas.fa-bars-staggered.text-white.text-2xl{"aria-hidden" => "true"}
 
-        .hidden.z-10.mt-2.w-56.rounded-md.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5{ role: "menu", aria: { orientation: "vertical", labelledby: "language-dropdown" } }
-          .py-1{ role: "none", id: "language-dropdown-content" }
-            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
-              %img.inline-block.w-4.h-4.mr-2{ src: "tr.png", alt: "Türkçe" } Türkçe
-            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
-              %img.inline-block.w-4.h-4.mr-2{ src: "en.png", alt: "English" } English
-            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
-              %img.inline-block.w-4.h-4.mr-2{ src: "ka.png", alt: "ქართული" } ქართული
-            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
-              %img.inline-block.w-4.h-4.mr-2{ src: "fr.png", alt: "Français" } Français
-            %a.block.px-4.py-2.text-sm.text-gray-700.hover:bg-gray-100{ href: "#", role: "menuitem" }
-              %img.inline-block.w-4.h-4.mr-2{ src: "de.png", alt: "Deutsch" } Deutsch
+    - if user_signed_in?
+      .flex.items-center.space-x-4
+        .relative
+          %button{ type: "button", class: "flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500", id: "user-button" }
+            - profile_image = current_user.profile_image.attached? ? url_for(current_user.profile_image) : image_path("default_user.png")
+            %img{ src: profile_image, alt: "User Avatar", class: "h-10 w-10 rounded-full" }
+          #user-menu.absolute.right-0.mt-2.min-w-max.rounded-md.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5.hidden
+            %a{ href: edit_user_registration_path, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left" }
+              %i.fas.fa-user.mr-2
+              = t('views.navbar.profile')
+            %form{ action: destroy_user_session_path, method: :delete }
+              %button{ type: "submit", class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left w-full" }
+                %i.fas.fa-sign-out-alt.mr-2
+                = t('views.navbar.logout')
+
+        .relative
+          %button{ type: "button", class: "flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500", id: "language-button" }
+            - current_locale = current_user&.locale || I18n.default_locale
+            %img{ src: image_path("#{current_locale}.png"), alt: current_locale.to_s.upcase, class: "h-6 w-6 rounded-full" }
+          #language-menu.absolute.right-0.mt-2.min-w-max.rounded-md.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5.hidden
+            - [:tr, :en, :de, :fr, :ka, :hr, :kk, :lv, :mk, :ru].each do |locale|
+              %a{ href: "#", class: "flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left", data: { locale: locale } }
+                %img{ src: image_path("#{locale}.png"), alt: locale.to_s.upcase, class: "h-4 w-4 inline mr-2" } 
+                = locale.to_s.upcase
+
+    - unless user_signed_in?
+      .flex.items-center.space-x-4
+        %a{ href: new_user_session_path, class: "inline-flex items-center text-md p-2 text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white" } Sign In
+        %a{ href: new_user_registration_path, class: "inline-flex items-center text-md p-2 text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white" } Sign Up
+
+
+%aside#default-sidebar.fixed.top-16.left-0.z-40.w-64.h-screen.transition-transform.-translate-x-full{"aria-label" => "Sidebar"}
+  .h-full.px-3.py-4.overflow-y-auto.bg-gray-50.dark:bg-gray-800
+    %ul.space-y-2.font-medium
+      %li
+        %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: roles_path}
+          %i.fas.fa-user.roles-icon{"aria-hidden" => "true"}
+          %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.roles')
+      %li
+        %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: teams_path}
+          %i.fas.fa-users.teams-icon{"aria-hidden" => "true"}
+          %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.teams')
+
+:javascript
+  document.addEventListener('turbo:load', () => {
+    const toggle = (btn, menu, hideMenu) => btn.onclick = e => {
+      e.stopPropagation();
+      menu.classList.toggle('hidden');
+      hideMenu?.classList.add('hidden');
+    };
+
+    ['user', 'language'].forEach(type => {
+      toggle(document.getElementById(`${type}-button`), document.getElementById(`${type}-menu`), document.getElementById(type === 'user' ? 'language-menu' : 'user-menu'));
+    });
+
+    document.onclick = () => {
+      document.querySelectorAll('#user-menu, #language-menu').forEach(m => m.classList.add('hidden'));
+      document.getElementById('default-sidebar').classList.add('-translate-x-full');
+    };
+
+    document.getElementById('sidebar-toggle').onclick = e => {
+      e.stopPropagation();
+      document.getElementById('default-sidebar').classList.toggle('-translate-x-full');
+    };
+
+    document.querySelectorAll('#language-menu a').forEach(link => link.onclick = e => {
+      e.preventDefault();
+      fetch('/update_locale', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content },
+        body: JSON.stringify({ locale: link.dataset.locale })
+      }).then(res => res.ok && location.reload()).catch(console.error);
+    });
+  });

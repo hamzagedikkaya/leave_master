@@ -1,5 +1,7 @@
 en:
   controllers:
+    application:
+      locale_updated: "Locale updated to "
     two_factor_authentication:
       success: "Login successful! Welcome."
       invalid_code: "Invalid verification code. Please try again."
@@ -20,7 +22,7 @@ en:
       locale_invalid: "%{value} is not a valid locale"
   views:
     navbar:
-      edit_account: "Edit Account"
-      sign_out: "Sign Out"
-      sign_up: "Sign Up"
-      sign_in: "Sign In"
+      profile: "Profile"
+      logout: "Logout"
+      roles: "Roles"
+      teams: "Teams"

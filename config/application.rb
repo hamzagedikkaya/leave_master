@@ -22,7 +22,8 @@ module LeaveMaster
 
     config.time_zone = "Istanbul"
 
-    config.active_job.queue_adapter = :sidekiq
+    # TODO: image eklerken hata veriyor.
+    # config.active_job.queue_adapter = :sidekiq
     config.exceptions_app = routes
 
     # Configuration for the application, engines, and railties goes here.
