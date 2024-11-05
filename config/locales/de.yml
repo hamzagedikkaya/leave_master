@@ -1,5 +1,7 @@
 de:
   controllers:
+    application:
+      locale_updated: "Sprache erfolgreich aktualisiert: "
     two_factor_authentication:
       success: "Anmeldung erfolgreich! Willkommen."
       invalid_code: "Ungültiger Bestätigungscode. Bitte versuchen Sie es erneut."
@@ -20,7 +22,7 @@ de:
       locale_invalid: "%{value} ist kein gültiger Ort."
   views:
     navbar:
-      edit_account: "Konto bearbeiten"
-      sign_out: "Abmelden"
-      sign_up: "Registrieren"
-      sign_in: "Anmelden"
+      profile: "Profil"
+      logout: "Abmelden"
+      roles: "Rollen"
+      teams: "Teams"

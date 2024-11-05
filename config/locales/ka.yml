@@ -1,5 +1,7 @@
 ka:
   controllers:
+    application:
+      locale_updated: "ენა წარმატებით განახლდა: "
     two_factor_authentication:
       success: "ავტორიზაცია წარმატებულია! კეთილი იყოს თქვენი მობრძანება."
       invalid_code: "არასწორი გადამოწმების კოდი. გთხოვთ, სცადეთ კიდევ ერთხელ."
@@ -20,7 +22,7 @@ ka:
       locale_invalid: "%{value} არ არის ვალიდური ენა."
   views:
     navbar:
-      edit_account: "ანგარიშის რედაქტირება"
-      sign_out: "გამოსვლა"
-      sign_up: "რეგისტრაცია"
-      sign_in: "შესვლა"
+      profile: "პროფილი"
+      logout: "გასვლა"
+      roles: "როლები"
+      teams: "გუნდები"

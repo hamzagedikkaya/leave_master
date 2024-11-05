@@ -1,5 +1,7 @@
 kk:
   controllers:
+    application:
+      locale_updated: "Тіл сәтті жаңартылды: "
     two_factor_authentication:
       success: "Кіру рәсімі сәтті өтті! Қош келдіңіз."
       invalid_code: "Жарамсыз растау коды. Қайтадан әрекет етіңіз."
@@ -20,7 +22,7 @@ kk:
       locale_invalid: "%{value} жарамсыз тіл."
   views:
     navbar:
-      edit_account: "Есепті өңдеу"
-      sign_out: "Шығу"
-      sign_up: "Тіркелу"
-      sign_in: "Кіру"
+      profile: "Профиль"
+      logout: "Шығу"
+      roles: "Рөлдер"
+      teams: "Командалар"

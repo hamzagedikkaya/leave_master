@@ -1,5 +1,7 @@
 lv:
   controllers:
+    application:
+      locale_updated: "Valoda veiksmīgi atjaunināta: "
     two_factor_authentication:
       success: "Pieteikšanās veiksmīga! Laipni lūdzam."
       invalid_code: "Nederīgs verifikācijas kods. Lūdzu, mēģiniet vēlreiz."
@@ -20,7 +22,7 @@ lv:
       locale_invalid: "%{value} nav derīga valoda."
   views:
     navbar:
-      edit_account: "Rediģēt kontu"
-      sign_out: "Iziet"
-      sign_up: "Reģistrēties"
-      sign_in: "Pieteikties"
+      profile: "Profils"
+      logout: "Iziet"
+      roles: "Lomas"
+      teams: "Komandas"

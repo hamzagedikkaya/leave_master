@@ -1,5 +1,7 @@
 hr:
   controllers:
+    application:
+      locale_updated: "Jezik je uspješno ažuriran: "
     two_factor_authentication:
       success: "Prijava uspješna! Dobrodošli."
       invalid_code: "Nevažeći kod za potvrdu. Pokušajte ponovo."
@@ -20,7 +22,7 @@ hr:
       locale_invalid: "%{value} nije važeći jezik."
   views:
     navbar:
-      edit_account: "Uredi račun"
-      sign_out: "Odjavi se"
-      sign_up: "Prijavi se"
-      sign_in: "Prijavi se"
+      profile: "Profil"
+      logout: "Odjava"
+      roles: "Uloge"
+      teams: "Timovi"

@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern
   before_action :set_locale
 
+  def update_locale
+    if current_user && params[:locale].in?(I18n.available_locales.map(&:to_s))
+      current_user.update(locale: params[:locale])
+      flash[:notice] = "#{I18n.t('controllers.application.locale_updated')} #{params[:locale].upcase}"
+    end
+    head :ok
+  end
+
   private
 
   def set_locale

@@ -1,5 +1,7 @@
 tr:
   controllers:
+    application:
+      locale_updated: "Dil başarıyla güncellendi: "
     two_factor_authentication:
       success: "Giriş başarılı! Hoş geldiniz."
       invalid_code: "Geçersiz doğrulama kodu. Lütfen tekrar deneyin."
@@ -20,7 +22,7 @@ tr:
       locale_invalid: "%{value} geçersiz bir dil."
   views:
     navbar:
-      edit_account: "Hesabı Düzenle"
-      sign_out: "Çıkış Yap"
-      sign_up: "Kayıt Ol"
-      sign_in: "Giriş Yap"
+      profile: "Profil"
+      logout: "Çıkış"
+      roles: "Roller"
+      teams: "Takımlar"

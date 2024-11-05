@@ -1,5 +1,7 @@
 fr:
   controllers:
+    application:
+      locale_updated: "Langue mise à jour avec succès: "
     two_factor_authentication:
       success: "Connexion réussie! Bienvenue."
       invalid_code: "Code de vérification invalide. Veuillez réessayer."
@@ -20,7 +22,7 @@ fr:
       locale_invalid: "%{value} n'est pas une langue valide."
   views:
     navbar:
-      edit_account: "Modifier le compte"
-      sign_out: "Se déconnecter"
-      sign_up: "S'inscrire"
-      sign_in: "Se connecter"
+      profile: "Profil"
+      logout: "Déconnexion"
+      roles: "Rôles"
+      teams: "Équipes"

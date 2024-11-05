@@ -1,5 +1,7 @@
 ru:
   controllers:
+    application:
+      locale_updated: "Язык успешно обновлён: "
     two_factor_authentication:
       success: "Вход успешен! Добро пожаловать."
       invalid_code: "Неверный код подтверждения. Пожалуйста, попробуйте еще раз."
@@ -20,7 +22,7 @@ ru:
       locale_invalid: "%{value} не является допустимым языком."
   views:
     navbar:
-      edit_account: "Редактировать аккаунт"
-      sign_out: "Выйти"
-      sign_up: "Зарегистрироваться"
-      sign_in: "Войти"
+      profile: "Профиль"
+      logout: "Выход"
+      roles: "Роли"
+      teams: "Команды"
