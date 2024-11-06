@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   def update_locale
     if current_user && params[:locale].in?(I18n.available_locales.map(&:to_s))
       current_user.update(locale: params[:locale])
+      I18n.locale = params[:locale]
       flash[:notice] = "#{I18n.t('controllers.application.locale_updated')} #{params[:locale].upcase}"
     end
     head :ok
