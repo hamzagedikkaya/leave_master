@@ -19,12 +19,22 @@ class User < ApplicationRecord
   validates :date_of_birth, presence: true
   validate :acceptable_image
 
+  has_many :user_roles, dependent: :destroy
+  has_many :roles, through: :user_roles
+
   validates :locale, inclusion: {
-    in: %w[en hr mk kk lv de fr ka ru kz],
+    in: %w[tr en hr mk kk lv de fr ka ru kz],
     message: lambda { |_object, data|
       I18n.t("models.user.locale_invalid", value: data[:value])
     }
   }, allow_blank: true
+
+  def permission_for?(path)
+    user_roles.includes(:role).any? do |user_role|
+      role = user_role.role
+      role.menu.include?(path)
+    end
+  end
 
   def generate_otp_secret
     self.otp_secret = ROTP::Base32.random
