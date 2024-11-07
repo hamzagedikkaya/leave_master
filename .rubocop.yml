@@ -4,6 +4,8 @@ AllCops:
 
 Layout/LineLength:
   Max: 150                  # Enforces a maximum line length of 150 characters.
+  Exclude:
+    - 'lib/role_functions.rb'
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes # Enforces the use of double quotes for strings.

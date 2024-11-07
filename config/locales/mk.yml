@@ -1,5 +1,6 @@
 mk:
   controllers:
+    authorize_user_access: "Nemate дозвола да ја извршите оваа акција."
     application:
       locale_updated: "Јазикот успешно е ажуриран:"
     two_factor_authentication:

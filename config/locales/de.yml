@@ -1,5 +1,6 @@
 de:
   controllers:
+    authorize_user_access: "Sie haben keine Berechtigung, diese Aktion auszuführen."
     application:
       locale_updated: "Sprache erfolgreich aktualisiert: "
     two_factor_authentication:

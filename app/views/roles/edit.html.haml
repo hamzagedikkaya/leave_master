@@ -5,7 +5,17 @@
     = f.input :name, label: 'Role Name', input_html: { class: 'form-control' }
 
   .form-group
-    = f.input :menu, label: 'Menüler', as: :select, collection: RoleFunctions.menu_ability_models.map { |model, path| [model, path] }, include_blank: 'Seçiniz', input_html: { class: 'form-control select-box', multiple: true }
+    = f.input :menu, label: 'Menüler', as: :select,
+      collection: RoleFunctions.menu_ability_models.map { |model, path| [model, path] },
+      include_blank: 'Seçiniz', input_html: { class: 'form-control select-box', multiple: true }
+
+  - @role.menu.each do |path|
+    - abilities = RoleFunctions.get_abilities_for_path(path)
+    - unless abilities.empty?
+      .form-group
+        = f.input :ability, label: "#{path} Yetkileri", as: :select,
+          collection: abilities.map { |model, action| [model, action] },
+          include_blank: 'Seçiniz', input_html: { class: 'form-control select-box', multiple: true, name: "role[ability][#{path}][]" }
 
   .form-group
     = f.submit 'Güncelle', class: 'btn btn-primary btn-lg'

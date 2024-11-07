@@ -7,6 +7,20 @@ class RoleFunctions
     %w[Takımlar teams_path]
   ].freeze
 
+  USER_ABILITY_MODELS = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
+  ROLE_ABILITY_MODELS = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
+  TEAM_ABILITY_MODELS = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
+
+  ALL_ABILITY_MODELS = {
+    "users_path" => USER_ABILITY_MODELS,
+    "roles_path" => ROLE_ABILITY_MODELS,
+    "teams_path" => TEAM_ABILITY_MODELS
+  }.freeze
+
+  def self.get_abilities_for_path(path)
+    ALL_ABILITY_MODELS[path] || []
+  end
+
   def self.menu_ability_models
     MENU_ABILITY_MODELS
   end

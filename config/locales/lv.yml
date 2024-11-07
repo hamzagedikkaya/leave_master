@@ -1,5 +1,6 @@
 lv:
   controllers:
+    authorize_user_access: "Jums nav atļaujas veikt šo darbību."
     application:
       locale_updated: "Valoda veiksmīgi atjaunināta: "
     two_factor_authentication:

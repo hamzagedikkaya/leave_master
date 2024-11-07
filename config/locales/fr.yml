@@ -1,5 +1,6 @@
 fr:
   controllers:
+    authorize_user_access: "Vous n'avez pas la permission d'effectuer cette action."
     application:
       locale_updated: "Langue mise à jour avec succès: "
     two_factor_authentication:
