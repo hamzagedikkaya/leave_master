@@ -26,3 +26,16 @@ en:
       logout: "Logout"
       roles: "Roles"
       teams: "Teams"
+      sign_in: "Sign In"
+      sign_up: "Sign Up"
+    links:
+      login: "Log in"
+      sign_up: "Sign up"
+      forgot_password: "Forgot your password?"
+    sessions:
+      new:
+        log_in_title: "Log in"
+        email_label: "Email"
+        password_label: "Password"
+        remember_me: "Remember me"
+        log_in_button: "Log in"

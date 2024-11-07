@@ -26,3 +26,16 @@ ru:
       logout: "Выход"
       roles: "Роли"
       teams: "Команды"
+      sign_in: "Войти"
+      sign_up: "Регистрация"
+    links:
+      login: "Войти"
+      sign_up: "Зарегистрироваться"
+      forgot_password: "Забыли пароль?"
+    sessions:
+      new:
+        log_in_title: "Войти"
+        email_label: "Электронная почта"
+        password_label: "Пароль"
+        remember_me: "Запомнить меня"
+        log_in_button: "Войти"
