@@ -26,3 +26,16 @@ kk:
       logout: "Шығу"
       roles: "Рөлдер"
       teams: "Командалар"
+      sign_in: "Кіру"
+      sign_up: "Тіркелу"
+    links:
+      login: "Кіру"
+      sign_up: "Тіркелу"
+      forgot_password: "Құпия сөзді ұмыттыңыз ба?"
+    sessions:
+      new:
+        log_in_title: "Кіру"
+        email_label: "Электронды пошта"
+        password_label: "Құпия сөз"
+        remember_me: "Мені есте сақта"
+        log_in_button: "Кіру"

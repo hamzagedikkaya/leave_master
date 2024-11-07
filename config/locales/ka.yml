@@ -26,3 +26,16 @@ ka:
       logout: "გასვლა"
       roles: "როლები"
       teams: "გუნდები"
+      sign_in: "შესვლა"
+      sign_up: "რეგისტრაცია"
+    links:
+      login: "შესვლა"
+      sign_up: "რეგისტრაცია"
+      forgot_password: "დაგავიწყდათ პაროლი?"
+    sessions:
+      new:
+        log_in_title: "შესვლა"
+        email_label: "ელ. ფოსტა"
+        password_label: "პაროლი"
+        remember_me: "დამიმახსოვრე"
+        log_in_button: "შესვლა"

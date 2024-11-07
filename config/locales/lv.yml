@@ -26,3 +26,16 @@ lv:
       logout: "Iziet"
       roles: "Lomas"
       teams: "Komandas"
+      sign_in: "Pieteikties"
+      sign_up: "Reģistrēties"
+    links:
+      login: "Pieteikties"
+      sign_up: "Reģistrēties"
+      forgot_password: "Aizmirsi paroli?"
+    sessions:
+      new:
+        log_in_title: "Pieslēgties"
+        email_label: "E-pasts"
+        password_label: "Parole"
+        remember_me: "Atcerēties mani"
+        log_in_button: "Pieslēgties"

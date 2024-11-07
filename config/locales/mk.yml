@@ -26,3 +26,16 @@ mk:
       logout: "Излез"
       roles: "Роли"
       teams: "Тимови"
+      sign_in: "Најави се"
+      sign_up: "Регистрирај се"
+    links:
+      login: "Најави се"
+      sign_up: "Регистрирај се"
+      forgot_password: "Ја заборавивте лозинката?"
+    sessions:
+      new:
+        log_in_title: "Најави се"
+        email_label: "Е-пошта"
+        password_label: "Лозинка"
+        remember_me: "Запомни ме"
+        log_in_button: "Најави се"

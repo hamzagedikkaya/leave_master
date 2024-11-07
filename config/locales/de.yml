@@ -26,3 +26,16 @@ de:
       logout: "Abmelden"
       roles: "Rollen"
       teams: "Teams"
+      sign_in: "Anmelden"
+      sign_up: "Registrieren"
+    links:
+      login: "Einloggen"
+      sign_up: "Registrieren"
+      forgot_password: "Passwort vergessen?"
+    sessions:
+      new:
+        log_in_title: "Anmelden"
+        email_label: "E-Mail"
+        password_label: "Passwort"
+        remember_me: "Erinnere dich an mich"
+        log_in_button: "Anmelden"
