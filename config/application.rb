@@ -25,6 +25,7 @@ module LeaveMaster
     # TODO: image eklerken hata veriyor.
     # config.active_job.queue_adapter = :sidekiq
     config.exceptions_app = routes
+    config.eager_load = true
 
     # Configuration for the application, engines, and railties goes here.
     #

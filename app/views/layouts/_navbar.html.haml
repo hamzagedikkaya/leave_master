@@ -1,7 +1,7 @@
 %nav.bg-gray-800.text-white.p-4.relative
   .container.mx-auto.flex.items-center.justify-between
     %div.flex.items-center
-      %a{ href: root_path, class: "flex items-center" } 
+      %a{ href: root_path, class: "flex items-center" }
         %span.text-xl.font-bold.text-white Leave Master
 
       - if user_signed_in?
@@ -33,7 +33,7 @@
           #language-menu.absolute.right-0.mt-2.min-w-max.rounded-md.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5.hidden
             - [:tr, :en, :de, :fr, :ka, :hr, :kk, :lv, :mk, :ru].each do |locale|
               %a{ href: "#", class: "flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left", data: { locale: locale } }
-                %img{ src: image_path("#{locale}.png"), alt: locale.to_s.upcase, class: "h-4 w-4 inline mr-2" } 
+                %img{ src: image_path("#{locale}.png"), alt: locale.to_s.upcase, class: "h-4 w-4 inline mr-2" }
                 = locale.to_s.upcase
 
     - unless user_signed_in?
@@ -43,15 +43,23 @@
 
 %aside#default-sidebar.fixed.top-16.left-0.z-40.w-64.h-screen.transition-transform.-translate-x-full{"aria-label" => "Sidebar"}
   .h-full.px-3.py-4.overflow-y-auto.bg-gray-50.dark:bg-gray-800
-    %ul.space-y-2.font-medium
-      %li
-        %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: roles_path}
-          %i.fas.fa-user.roles-icon{"aria-hidden" => "true"}
-          %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.roles')
-      %li
-        %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: teams_path}
-          %i.fas.fa-users.teams-icon{"aria-hidden" => "true"}
-          %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.teams')
+    - if current_user
+      %ul.space-y-2.font-medium
+        - if current_user.permission_for?("roles_path")
+          %li
+            %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: roles_path}
+              %i.fas.fa-user.roles-icon{"aria-hidden" => "true"}
+              %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.roles')
+        - if current_user.permission_for?("teams_path")
+          %li
+            %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: teams_path}
+              %i.fas.fa-users.teams-icon{"aria-hidden" => "true"}
+              %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.teams')
+        - if current_user.permission_for?("users_path")
+          %li
+            %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: users_path}
+              %i.fas.fa-users.teams-icon{"aria-hidden" => "true"}
+              %span.flex-1.ms-3.whitespace-nowrap= "Hesaplar"
 
 :javascript
   document.addEventListener('turbo:load', () => {

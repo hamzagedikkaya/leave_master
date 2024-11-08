@@ -1,5 +1,6 @@
 ka:
   controllers:
+    authorize_user_access: "Сізде бұл әрекетті орындауға рұқсат жоқ."
     application:
       locale_updated: "ენა წარმატებით განახლდა: "
     two_factor_authentication:
