@@ -1,5 +1,6 @@
 hr:
   controllers:
+    authorize_user_access: "Nemate dozvolu za izvođenje ove radnje."
     application:
       locale_updated: "Jezik je uspješno ažuriran: "
     two_factor_authentication:

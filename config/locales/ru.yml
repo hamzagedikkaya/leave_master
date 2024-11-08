@@ -1,5 +1,6 @@
 ru:
   controllers:
+    authorize_user_access: "У вас нет разрешения выполнить это действие."
     application:
       locale_updated: "Язык успешно обновлён: "
     two_factor_authentication:

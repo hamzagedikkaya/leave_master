@@ -1,88 +1,21 @@
-%h1.text-2xl.font-bold.mb-4 Rol Düzenle
+%h1 Edit Role
 
-= simple_form_for @role, local: true do |form|
-  - if @role.errors.any?
-    #error_explanation.bg-red-100.border-l-4.border-red-500.text-red-700.p-4.rounded.mb-4
-      %h2.font-bold
-        = pluralize(@role.errors.count, "error") + " prevented this role from being saved:"
-      %ul
-        - @role.errors.full_messages.each do |message|
-          %li= message
+= simple_form_for @role, html: { class: 'role-form' } do |f|
+  .form-group
+    = f.input :name, label: 'Role Name', input_html: { class: 'form-control' }
 
-  .mb-4
-    = form.input :name,
-                  label: 'Rol Adı',
-                  input_html: { class: 'block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50' }
+  .form-group
+    = f.input :menu, label: 'Menüler', as: :select,
+      collection: RoleFunctions.menu_ability_models.map { |model, path| [model, path] },
+      include_blank: 'Seçiniz', input_html: { class: 'form-control select-box', multiple: true }
 
-  .mb-4
-    %label.text-gray-700.font-medium{ for: 'filter-select' } Filtrele
+  - @role.menu.each do |path|
+    - abilities = RoleFunctions.get_abilities_for_path(path)
+    - unless abilities.empty?
+      .form-group
+        = f.input :ability, label: "#{path} Yetkileri", as: :select,
+          collection: abilities.map { |model, action| [model, action] },
+          include_blank: 'Seçiniz', input_html: { class: 'form-control select-box', multiple: true, name: "role[ability][#{path}][]" }
 
-    %select#filter-select{ data: { hs_select: '{ "placeholder": "<span class=\'inline-flex items-center\'>Filter</span>", "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-neutral-600" }' } }
-      %option{ value: "" } Choose
-      %option{ value: "name" } Name
-      %option{ value: "email" } Email address
-      %option{ value: "description" } Description
-      %option{ value: "user_id" } User ID
-
-  .relative
-    #selected-options{ class: 'border border-gray-300 rounded-lg py-2 px-3 cursor-pointer', onclick: 'toggleDropdown()' }
-      %span#selected-list.text-gray-700
-        Seçilenler:
-        %span#selected-list-container.text-gray-700
-
-    #menu-dropdown{ class: 'hidden absolute z-10 bg-white border border-gray-300 rounded-md mt-1 shadow-lg', onclick: 'event.stopPropagation()' }
-      %ul{ id: 'options-list', class: 'max-h-40 overflow-y-auto' }
-        - RoleFunctions.menu_ability_models.each do |ability|
-          %li
-            %label{ for: ability[1], class: 'block px-4 py-2 cursor-pointer hover:bg-gray-200' }
-              %input{ type: 'checkbox', value: ability[1], onchange: "updateSelectedOptions(this, '#{ability[0]}')" }
-              = ability[0]
-
-  .actions
-    = form.submit "Kaydet", class: 'mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-
-:javascript
-  document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('click', function(event) {
-      const menuDropdown = document.getElementById('menu-dropdown');
-      const selectedOptions = document.getElementById('selected-options');
-
-      if (!menuDropdown.contains(event.target) && !selectedOptions.contains(event.target)) {
-        menuDropdown.classList.add('hidden');
-      }
-    });
-  });
-
-  function toggleDropdown() {
-    const dropdown = document.getElementById('menu-dropdown');
-    dropdown.classList.toggle('hidden');
-  }
-
-  function updateSelectedOptions(checkbox, abilityName) {
-    const selectedList = document.getElementById('selected-list-container');
-
-    if (checkbox.checked) {
-      const listItem = document.createElement('div');
-      listItem.className = 'flex justify-between items-center border-b border-gray-300 py-1';
-      listItem.innerHTML = `
-        ${abilityName}
-        <button class="text-red-500 mr-2" onclick="removeOption('${checkbox.value}', this)">x</button>
-      `;
-      selectedList.appendChild(listItem);
-    } else {
-      removeOption(checkbox.value);
-    }
-  }
-
-  function removeOption(value, button) {
-    const selectedList = document.getElementById('selected-list-container');
-    const optionToRemove = button.parentElement;
-
-    if (optionToRemove) {
-      selectedList.removeChild(optionToRemove);
-      const checkbox = Array.from(document.querySelectorAll('#menu-dropdown input[type="checkbox"]')).find(input => input.value === value);
-      if (checkbox) {
-        checkbox.checked = false;
-      }
-    }
-  }
+  .form-group
+    = f.submit 'Güncelle', class: 'btn btn-primary btn-lg'

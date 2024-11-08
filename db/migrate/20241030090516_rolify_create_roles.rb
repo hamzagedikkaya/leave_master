@@ -6,6 +6,7 @@ class RolifyCreateRoles < ActiveRecord::Migration[7.2]
       t.string :name, null: false
       t.references :resource, polymorphic: true, index: true
       t.string :menu, array: true, default: []
+      t.json :ability, default: {}
 
       t.timestamps
     end

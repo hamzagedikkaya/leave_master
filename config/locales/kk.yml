@@ -1,5 +1,6 @@
 kk:
   controllers:
+    authorize_user_access: "არ გაქვთ უფლება შეასრულოთ ეს ქმედება."
     application:
       locale_updated: "Тіл сәтті жаңартылды: "
     two_factor_authentication:
