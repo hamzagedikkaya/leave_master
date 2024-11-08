@@ -39,3 +39,12 @@ lv:
         password_label: "Parole"
         remember_me: "Atcerēties mani"
         log_in_button: "Pieslēgties"
+    registrations:
+      new:
+        name_surname: "Vārds Uzvārds"
+        gsm: "GSM"
+        email: "E-pasts"
+        date_of_birth: "Dzimšanas datums"
+        password: "Parole"
+        password_confirmation: "Paroles apstiprinājums"
+        sign_up_button: "Reģistrēties"

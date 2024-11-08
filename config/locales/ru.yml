@@ -39,3 +39,12 @@ ru:
         password_label: "Пароль"
         remember_me: "Запомнить меня"
         log_in_button: "Войти"
+    registrations:
+      new:
+        name_surname: "Имя Фамилия"
+        gsm: "GSM"
+        email: "Электронная почта"
+        date_of_birth: "Дата рождения"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        sign_up_button: "Зарегистрироваться"

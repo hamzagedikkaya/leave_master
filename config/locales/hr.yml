@@ -39,3 +39,12 @@ hr:
         password_label: "Lozinka"
         remember_me: "Zapamti me"
         log_in_button: "Prijava"
+    registrations:
+      new:
+        name_surname: "Ime i Prezime"
+        gsm: "GSM"
+        email: "Email"
+        date_of_birth: "Datum rođenja"
+        password: "Lozinka"
+        password_confirmation: "Potvrda lozinke"
+        sign_up_button: "Registracija"

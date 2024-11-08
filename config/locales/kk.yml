@@ -39,3 +39,12 @@ kk:
         password_label: "Құпия сөз"
         remember_me: "Мені есте сақта"
         log_in_button: "Кіру"
+    registrations:
+      new:
+        name_surname: "Аты-жөні"
+        gsm: "GSM"
+        email: "Электрондық пошта"
+        date_of_birth: "Туу күні"
+        password: "Құпия сөз"
+        password_confirmation: "Құпия сөзді растау"
+        sign_up_button: "Тіркелу"
