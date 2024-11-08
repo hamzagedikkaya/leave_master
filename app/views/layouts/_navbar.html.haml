@@ -10,6 +10,9 @@
 
     - if user_signed_in?
       .flex.items-center.space-x-4
+        .relative.text-sm
+          %span= current_user.name_surname
+
         .relative
           %button{ type: "button", class: "flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500", id: "user-button" }
             - profile_image = current_user.profile_image.attached? ? url_for(current_user.profile_image) : image_path("default_user.png")
