@@ -26,6 +26,8 @@ de:
       logout: "Abmelden"
       roles: "Rollen"
       teams: "Teams"
+      sign_in: "Anmelden"
+      sign_up: "Registrieren"
     links:
       login: "Einloggen"
       sign_up: "Registrieren"

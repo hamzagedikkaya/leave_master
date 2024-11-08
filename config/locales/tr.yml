@@ -26,6 +26,8 @@ tr:
       logout: "Çıkış"
       roles: "Roller"
       teams: "Takımlar"
+      sign_in: "Giriş Yap"
+      sign_up: "Kayıt Ol"
     links:
       login: "Giriş Yap"
       sign_up: "Kayıt Ol"
