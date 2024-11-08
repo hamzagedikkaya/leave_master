@@ -39,3 +39,12 @@ fr:
         password_label: "Mot de passe"
         remember_me: "Se souvenir de moi"
         log_in_button: "Connexion"
+    registrations:
+      new:
+        name_surname: "Nom Prénom"
+        gsm: "GSM"
+        email: "E-mail"
+        date_of_birth: "Date de naissance"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+        sign_up_button: "S'inscrire"

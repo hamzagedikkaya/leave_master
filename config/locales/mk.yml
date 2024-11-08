@@ -39,3 +39,12 @@ mk:
         password_label: "Лозинка"
         remember_me: "Запомни ме"
         log_in_button: "Најави се"
+    registrations:
+      new:
+        name_surname: "Име Презиме"
+        gsm: "GSM"
+        email: "Е-пошта"
+        date_of_birth: "Датум на раѓање"
+        password: "Лозинка"
+        password_confirmation: "Потврда на лозинка"
+        sign_up_button: "Пријави се"

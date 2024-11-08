@@ -39,3 +39,12 @@ tr:
         password_label: "Şifre"
         remember_me: "Beni Hatırla"
         log_in_button: "Giriş Yap"
+    registrations:
+      new:
+        name_surname: "Ad Soyad"
+        gsm: "GSM"
+        email: "E-posta"
+        date_of_birth: "Doğum Tarihi"
+        password: "Şifre"
+        password_confirmation: "Şifre Tekrarı"
+        sign_up_button: "Kaydol"
