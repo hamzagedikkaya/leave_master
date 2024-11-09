@@ -25,10 +25,11 @@ ka:
     navbar:
       profile: "პროფილი"
       logout: "გასვლა"
-      roles: "როლები"
-      teams: "გუნდები"
       sign_in: "შესვლა"
       sign_up: "რეგისტრაცია"
+      roles: "როლები"
+      teams: "გუნდები"
+      users: "მომხმარებლები"
     links:
       login: "შესვლა"
       sign_up: "რეგისტრაცია"

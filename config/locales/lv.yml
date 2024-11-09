@@ -25,10 +25,11 @@ lv:
     navbar:
       profile: "Profils"
       logout: "Iziet"
-      roles: "Lomas"
-      teams: "Komandas"
       sign_in: "Pieteikties"
       sign_up: "Reģistrēties"
+      roles: "Lomas"
+      teams: "Komandas"
+      users: "Lietotāji"
     links:
       login: "Pieteikties"
       sign_up: "Reģistrēties"
