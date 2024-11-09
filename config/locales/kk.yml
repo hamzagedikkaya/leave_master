@@ -25,10 +25,11 @@ kk:
     navbar:
       profile: "Профиль"
       logout: "Шығу"
-      roles: "Рөлдер"
-      teams: "Командалар"
       sign_in: "Кіру"
       sign_up: "Тіркелу"
+      roles: "Рөлдер"
+      teams: "Командалар"
+      users: "Пайдаланушылар"
     links:
       login: "Кіру"
       sign_up: "Тіркелу"

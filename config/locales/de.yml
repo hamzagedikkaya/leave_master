@@ -25,10 +25,11 @@ de:
     navbar:
       profile: "Profil"
       logout: "Abmelden"
-      roles: "Rollen"
-      teams: "Teams"
       sign_in: "Anmelden"
       sign_up: "Registrieren"
+      roles: "Rollen"
+      teams: "Teams"
+      users: "Benutzer"
     links:
       login: "Einloggen"
       sign_up: "Registrieren"

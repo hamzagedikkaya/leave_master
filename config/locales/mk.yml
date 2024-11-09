@@ -25,10 +25,11 @@ mk:
     navbar:
       profile: "Профил"
       logout: "Излез"
-      roles: "Роли"
-      teams: "Тимови"
       sign_in: "Најави се"
       sign_up: "Регистрирај се"
+      roles: "Роли"
+      teams: "Тимови"
+      users: "Корисници"
     links:
       login: "Најави се"
       sign_up: "Регистрирај се"

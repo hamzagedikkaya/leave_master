@@ -25,10 +25,11 @@ fr:
     navbar:
       profile: "Profil"
       logout: "Déconnexion"
-      roles: "Rôles"
-      teams: "Équipes"
       sign_in: "Connexion"
       sign_up: "S'inscrire"
+      roles: "Rôles"
+      teams: "Équipes"
+      users: "Utilisateurs"
     links:
       login: "Connexion"
       sign_up: "S'inscrire"

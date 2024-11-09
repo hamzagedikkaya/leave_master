@@ -25,10 +25,11 @@ ru:
     navbar:
       profile: "Профиль"
       logout: "Выход"
-      roles: "Роли"
-      teams: "Команды"
       sign_in: "Войти"
       sign_up: "Регистрация"
+      roles: "Роли"
+      teams: "Команды"
+      users: "Пользователи"
     links:
       login: "Войти"
       sign_up: "Зарегистрироваться"

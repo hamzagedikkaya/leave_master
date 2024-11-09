@@ -25,10 +25,11 @@ hr:
     navbar:
       profile: "Profil"
       logout: "Odjava"
-      roles: "Uloge"
-      teams: "Timovi"
       sign_in: "Prijavite se"
       sign_up: "Registracija"
+      roles: "Uloge"
+      teams: "Timovi"
+      users: "Korisnici"
     links:
       login: "Prijavite se"
       sign_up: "Registrirajte se"

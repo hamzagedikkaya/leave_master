@@ -25,10 +25,11 @@ tr:
     navbar:
       profile: "Profil"
       logout: "Çıkış"
-      roles: "Roller"
-      teams: "Takımlar"
       sign_in: "Giriş Yap"
       sign_up: "Kayıt Ol"
+      roles: "Roller"
+      teams: "Takımlar"
+      users: "Kullanıcılar"
     links:
       login: "Giriş Yap"
       sign_up: "Kayıt Ol"
