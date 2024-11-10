@@ -6,13 +6,6 @@ en:
     two_factor_authentication:
       success: "Login successful! Welcome."
       invalid_code: "Invalid verification code. Please try again."
-    teams:
-      create:
-        created: "Team was successfully created."
-      update:
-        updated: "Team was successfully updated."
-      destroy:
-        deleted: "Team was successfully deleted."
     roles:
       create:
         created: "Role was successfully created."
@@ -28,7 +21,6 @@ en:
       sign_in: "Sign In"
       sign_up: "Sign Up"
       roles: "Roles"
-      teams: "Teams"
       users:
     links:
       login: "Log in"

@@ -6,13 +6,6 @@ tr:
     two_factor_authentication:
       success: "Giriş başarılı! Hoş geldiniz."
       invalid_code: "Geçersiz doğrulama kodu. Lütfen tekrar deneyin."
-    teams:
-      create:
-        created: "Takım başarıyla oluşturuldu."
-      update:
-        updated: "Takım başarıyla güncellendi."
-      destroy:
-        deleted: "Takım başarıyla silindi."
     roles:
       create:
         created: "Rol başarıyla oluşturuldu."
@@ -28,7 +21,6 @@ tr:
       sign_in: "Giriş Yap"
       sign_up: "Kayıt Ol"
       roles: "Roller"
-      teams: "Takımlar"
       users: "Kullanıcılar"
     links:
       login: "Giriş Yap"

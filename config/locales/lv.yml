@@ -6,13 +6,6 @@ lv:
     two_factor_authentication:
       success: "Pieteikšanās veiksmīga! Laipni lūdzam."
       invalid_code: "Nederīgs verifikācijas kods. Lūdzu, mēģiniet vēlreiz."
-    teams:
-      create:
-        created: "Komanda tika veiksmīgi izveidota."
-      update:
-        updated: "Komanda tika veiksmīgi atjaunināta."
-      destroy:
-        deleted: "Komanda tika veiksmīgi dzēsta."
     roles:
       create:
         created: "Loma tika veiksmīgi izveidota."
@@ -28,7 +21,6 @@ lv:
       sign_in: "Pieteikties"
       sign_up: "Reģistrēties"
       roles: "Lomas"
-      teams: "Komandas"
       users: "Lietotāji"
     links:
       login: "Pieteikties"

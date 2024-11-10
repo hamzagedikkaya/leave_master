@@ -6,13 +6,6 @@ kk:
     two_factor_authentication:
       success: "Кіру рәсімі сәтті өтті! Қош келдіңіз."
       invalid_code: "Жарамсыз растау коды. Қайтадан әрекет етіңіз."
-    teams:
-      create:
-        created: "Команда сәтті құрылды."
-      update:
-        updated: "Команда сәтті жаңартылды."
-      destroy:
-        deleted: "Команда сәтті жойылды."
     roles:
       create:
         created: "Роль сәтті құрылды."
@@ -28,7 +21,6 @@ kk:
       sign_in: "Кіру"
       sign_up: "Тіркелу"
       roles: "Рөлдер"
-      teams: "Командалар"
       users: "Пайдаланушылар"
     links:
       login: "Кіру"

@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   root "main#home"
 
   resources :roles
-  resources :teams
   resources :users
 
   post "update_locale", to: "application#update_locale", as: :update_locale

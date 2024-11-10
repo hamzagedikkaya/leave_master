@@ -6,13 +6,6 @@ hr:
     two_factor_authentication:
       success: "Prijava uspješna! Dobrodošli."
       invalid_code: "Nevažeći kod za potvrdu. Pokušajte ponovo."
-    teams:
-      create:
-        created: "Tim je uspješno stvoren."
-      update:
-        updated: "Tim je uspješno ažuriran."
-      destroy:
-        deleted: "Tim je uspješno obrisan."
     roles:
       create:
         created: "Uloga je uspješno stvorena."
@@ -28,7 +21,6 @@ hr:
       sign_in: "Prijavite se"
       sign_up: "Registracija"
       roles: "Uloge"
-      teams: "Timovi"
       users: "Korisnici"
     links:
       login: "Prijavite se"
