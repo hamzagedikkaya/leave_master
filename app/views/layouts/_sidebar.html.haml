@@ -12,9 +12,3 @@
           %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: roles_path}
             %i.fas.fa-fingerprint.roles-icon{"aria-hidden" => "true"}
             %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.roles')
-
-      - if current_user.permission_for?("teams_path")
-        %li
-          %a.flex.items-center.p-2.text-gray-900.rounded-lg.dark:text-white.hover:bg-gray-100.dark:hover:bg-gray-700.group{href: teams_path}
-            %i.fas.fa-people-group.teams-icon{"aria-hidden" => "true"}
-            %span.flex-1.ms-3.whitespace-nowrap= t('views.navbar.teams')

@@ -6,13 +6,6 @@ fr:
     two_factor_authentication:
       success: "Connexion réussie! Bienvenue."
       invalid_code: "Code de vérification invalide. Veuillez réessayer."
-    teams:
-      create:
-        created: "L'équipe a été créée avec succès."
-      update:
-        updated: "L'équipe a été mise à jour avec succès."
-      destroy:
-        deleted: "L'équipe a été supprimée avec succès."
     roles:
       create:
         created: "Le rôle a été créé avec succès."
@@ -28,7 +21,6 @@ fr:
       sign_in: "Connexion"
       sign_up: "S'inscrire"
       roles: "Rôles"
-      teams: "Équipes"
       users: "Utilisateurs"
     links:
       login: "Connexion"

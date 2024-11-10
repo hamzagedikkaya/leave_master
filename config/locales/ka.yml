@@ -6,13 +6,6 @@ ka:
     two_factor_authentication:
       success: "ავტორიზაცია წარმატებულია! კეთილი იყოს თქვენი მობრძანება."
       invalid_code: "არასწორი გადამოწმების კოდი. გთხოვთ, სცადეთ კიდევ ერთხელ."
-    teams:
-      create:
-        created: "გუნდმა წარმატებით შექმნა."
-      update:
-        updated: "გუნდმა წარმატებით განაახლა."
-      destroy:
-        deleted: "გუნდმა წარმატებით წაშალა."
     roles:
       create:
         created: "როლი წარმატებით შეიქმნა."
@@ -28,7 +21,6 @@ ka:
       sign_in: "შესვლა"
       sign_up: "რეგისტრაცია"
       roles: "როლები"
-      teams: "გუნდები"
       users: "მომხმარებლები"
     links:
       login: "შესვლა"

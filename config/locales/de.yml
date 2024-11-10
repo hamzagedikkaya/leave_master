@@ -6,13 +6,6 @@ de:
     two_factor_authentication:
       success: "Anmeldung erfolgreich! Willkommen."
       invalid_code: "Ungültiger Bestätigungscode. Bitte versuchen Sie es erneut."
-    teams:
-      create:
-        created: "Das Team wurde erfolgreich erstellt."
-      update:
-        updated: "Das Team wurde erfolgreich aktualisiert."
-      destroy:
-        deleted: "Das Team wurde erfolgreich gelöscht."
     roles:
       create:
         created: "Die Rolle wurde erfolgreich erstellt."
@@ -28,7 +21,6 @@ de:
       sign_in: "Anmelden"
       sign_up: "Registrieren"
       roles: "Rollen"
-      teams: "Teams"
       users: "Benutzer"
     links:
       login: "Einloggen"

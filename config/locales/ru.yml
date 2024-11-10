@@ -6,13 +6,6 @@ ru:
     two_factor_authentication:
       success: "Вход успешен! Добро пожаловать."
       invalid_code: "Неверный код подтверждения. Пожалуйста, попробуйте еще раз."
-    teams:
-      create:
-        created: "Команда была успешно создана."
-      update:
-        updated: "Команда была успешно обновлена."
-      destroy:
-        deleted: "Команда была успешно удалена."
     roles:
       create:
         created: "Роль была успешно создана."
@@ -28,7 +21,6 @@ ru:
       sign_in: "Войти"
       sign_up: "Регистрация"
       roles: "Роли"
-      teams: "Команды"
       users: "Пользователи"
     links:
       login: "Войти"
