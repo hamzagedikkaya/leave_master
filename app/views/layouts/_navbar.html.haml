@@ -36,9 +36,10 @@
                 %img{ src: image_path("#{locale}.png"), alt: locale.to_s.upcase, class: "h-4 w-4 inline mr-2" }
                 = locale.to_s.upcase
 
-    - unless user_signed_in?
+    - else
       .flex.items-center.space-x-4
         %a{ href: new_user_session_path, class: "inline-flex items-center text-md p-2 text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white" }= t('views.navbar.sign_in')
         %a{ href: new_user_registration_path, class: "inline-flex items-center text-md p-2 text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white" }= t('views.navbar.sign_up')
 
-= render 'layouts/sidebar'
+- if user_signed_in?
+  = render 'layouts/sidebar'
