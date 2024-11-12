@@ -74,7 +74,7 @@ gem "mobility", "~> 1.2"
 
 gem "dotenv-rails", "~> 3.1"
 
-gem "devise-two-factor", "~> 6.0"
+gem "devise-two-factor", "~> 6.1"
 
 gem "rqrcode", "~> 2.2"
 
