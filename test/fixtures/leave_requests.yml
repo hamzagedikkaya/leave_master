@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  leave_type_id: 1
+  start_date: 2024-11-13
+  end_date: 2024-11-13
+  status: 0
+  location: MyString
+  description: MyText
+
+two:
+  user_id: 1
+  leave_type_id: 1
+  start_date: 2024-11-13
+  end_date: 2024-11-13
+  status: 1
+  location: MyString
+  description: MyText
