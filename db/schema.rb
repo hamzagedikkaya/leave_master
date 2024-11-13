@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_10_125419) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_13_152505) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,36 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_10_125419) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "leave_balances", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.date "start_date"
+    t.integer "total_leave_days"
+    t.integer "used_leave_days"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_leave_balances_on_user_id"
+  end
+
+  create_table "leave_requests", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "leave_type_id", null: false
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "status"
+    t.string "location"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["leave_type_id"], name: "index_leave_requests_on_leave_type_id"
+    t.index ["user_id"], name: "index_leave_requests_on_user_id"
+  end
+
+  create_table "leave_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "mobility_string_translations", force: :cascade do |t|
@@ -114,6 +144,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_10_125419) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "leave_balances", "users"
+  add_foreign_key "leave_requests", "leave_types"
+  add_foreign_key "leave_requests", "users"
   add_foreign_key "user_roles", "roles"
   add_foreign_key "user_roles", "users"
 end

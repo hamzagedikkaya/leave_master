@@ -21,6 +21,8 @@ class User < ApplicationRecord
 
   has_many :user_roles, dependent: :destroy
   has_many :roles, through: :user_roles
+  has_many :leave_requests, dependent: :destroy
+  has_many :leave_balances, dependent: :destroy
 
   validates :locale, inclusion: {
     in: %w[tr en hr mk kk lv de fr ka ru kz],
