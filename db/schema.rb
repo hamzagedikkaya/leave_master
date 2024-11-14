@@ -102,6 +102,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_13_152505) do
     t.string "resource_type"
     t.bigint "resource_id"
     t.string "menu", default: [], array: true
+    t.json "ability", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
