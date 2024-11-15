@@ -7,6 +7,7 @@ class CreateLeaveBalances < ActiveRecord::Migration[8.0]
       t.date       :start_date
       t.integer    :total_leave_days
       t.integer    :used_leave_days
+      t.integer    :yearly_entitlement
 
       t.timestamps
     end

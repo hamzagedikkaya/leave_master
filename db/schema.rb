@@ -47,6 +47,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_13_152505) do
     t.date "start_date"
     t.integer "total_leave_days"
     t.integer "used_leave_days"
+    t.integer "yearly_entitlement"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_leave_balances_on_user_id"
