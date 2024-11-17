@@ -21,7 +21,8 @@ en:
       sign_in: "Sign In"
       sign_up: "Sign Up"
       roles: "Roles"
-      users:
+      users: "Users"
+      definitions: "Definitions"
     links:
       login: "Log in"
       sign_up: "Sign up"

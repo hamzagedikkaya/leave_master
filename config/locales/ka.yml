@@ -22,6 +22,7 @@ ka:
       sign_up: "რეგისტრაცია"
       roles: "როლები"
       users: "მომხმარებლები"
+      definitions: "განსაზღვრებები"
     links:
       login: "შესვლა"
       sign_up: "რეგისტრაცია"

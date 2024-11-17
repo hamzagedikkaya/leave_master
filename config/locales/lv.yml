@@ -22,6 +22,7 @@ lv:
       sign_up: "Reģistrēties"
       roles: "Lomas"
       users: "Lietotāji"
+      definitions: "Definīcijas"
     links:
       login: "Pieteikties"
       sign_up: "Reģistrēties"

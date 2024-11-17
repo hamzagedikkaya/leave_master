@@ -22,6 +22,7 @@ tr:
       sign_up: "Kayıt Ol"
       roles: "Roller"
       users: "Kullanıcılar"
+      definitions: "Tanımlamalar"
     links:
       login: "Giriş Yap"
       sign_up: "Kayıt Ol"

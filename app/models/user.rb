@@ -25,7 +25,7 @@ class User < ApplicationRecord
   has_many :leave_balances, dependent: :destroy
 
   validates :locale, inclusion: {
-    in: %w[tr en hr mk kk lv de fr ka ru kz],
+    in: %w[tr en hr mk kk lv de fr ka ru],
     message: lambda { |_object, data|
       I18n.t("models.user.locale_invalid", value: data[:value])
     }
