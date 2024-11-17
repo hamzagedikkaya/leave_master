@@ -22,6 +22,7 @@ kk:
       sign_up: "Тіркелу"
       roles: "Рөлдер"
       users: "Пайдаланушылар"
+      definitions: "Анықтамалар"
     links:
       login: "Кіру"
       sign_up: "Тіркелу"

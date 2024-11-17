@@ -22,6 +22,7 @@ hr:
       sign_up: "Registracija"
       roles: "Uloge"
       users: "Korisnici"
+      definitions: "Definicije"
     links:
       login: "Prijavite se"
       sign_up: "Registrirajte se"

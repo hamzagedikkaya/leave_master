@@ -3,15 +3,18 @@
 class RoleFunctions
   MENU_ABILITY_MODELS = [
     %w[Hesaplar users_path],
-    %w[Roller roles_path]
+    %w[Roller roles_path],
+    %w[Tanımlamalar definitions_path]
   ].freeze
 
-  USER_ABILITY_MODELS = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
-  ROLE_ABILITY_MODELS = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
+  USER_ABILITY_MODELS       = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
+  ROLE_ABILITY_MODELS       = [%w[Görüntüleme index], %w[Oluşturma new], %w[Güncelleme create], %w[Düzenleme edit], %w[Güncelleme update], %w[Silme destroy]].freeze
+  DEFINITION_ABILITY_MODELS = [%w[Görüntüleme index]].freeze
 
   ALL_ABILITY_MODELS = {
     "users_path" => USER_ABILITY_MODELS,
-    "roles_path" => ROLE_ABILITY_MODELS
+    "roles_path" => ROLE_ABILITY_MODELS,
+    "definitions_path" => DEFINITION_ABILITY_MODELS
   }.freeze
 
   def self.get_abilities_for_path(path)

@@ -22,6 +22,7 @@ ru:
       sign_up: "Регистрация"
       roles: "Роли"
       users: "Пользователи"
+      definitions: "Определения"
     links:
       login: "Войти"
       sign_up: "Зарегистрироваться"
