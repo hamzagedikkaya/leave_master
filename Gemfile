@@ -70,7 +70,7 @@ gem "hamlit", "~> 3.0"
 
 gem "rolify", "~> 6.0"
 
-gem "mobility", "~> 1.2"
+gem "mobility", "~> 1.3"
 
 gem "dotenv-rails", "~> 3.1"
 
